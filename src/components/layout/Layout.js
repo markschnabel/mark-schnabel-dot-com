@@ -10,6 +10,7 @@ import 'typeface-lato'
 // Local imports
 import './layout.css'
 import Container from '../styled/Container'
+import Navbar from './navbar/Navbar'
 
 class Layout extends Component {
   render() {
@@ -43,6 +44,7 @@ class Layout extends Component {
             >
               <html lang="en" />
             </Helmet>
+            <Navbar />
             <Container>{this.props.children}</Container>
           </>
         )}

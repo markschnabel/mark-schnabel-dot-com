@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 
 const ContainerStyles = styled.div`
-  ${tw`sm:mx-5% xl:mx-auto max-w-1200`};
+  ${tw`mx-5% xl:mx-auto max-w-1200`};
 `
 
 const Container = ({ children }) => {
