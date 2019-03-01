@@ -5,11 +5,12 @@ import { StaticQuery, graphql } from 'gatsby'
 
 // Import typefaces here to make them available globally
 import 'typeface-lato'
+import 'typeface-inter'
 
 // Local imports
 import './layout.css'
 import { screens as twScreens } from '../../../tailwind'
-import Container from '../styled/Container'
+import Container from '../shared/Container'
 import Navbar from './navbar/Navbar'
 import MobileMenu from './mobileMenu/MobileMenu'
 

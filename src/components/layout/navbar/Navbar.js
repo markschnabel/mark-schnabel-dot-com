@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 
-import Container from '../../styled/Container'
+import Container from '../../shared/Container'
 import Brand from './Brand'
 import MobileMenuButton from './MobileMenuButton'
 import Links from './Links'

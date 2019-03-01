@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   ${tw`absolute w-100% h-100% flex justify-center items-center`};

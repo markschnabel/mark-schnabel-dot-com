@@ -20,6 +20,43 @@ module.exports = {
         icon: 'src/images/icon.png',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images/projects`,
+        name: 'projectImages',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/markdown/projects`,
+        name: 'projectMarkdown',
+      },
+    },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-transformer-remark`,
+            options: {
+              plugins: [
+                {
+                  resolve: 'gatsby-remark-copy-linked-files',
+                  options: {
+                    destinationDir: '/images/projects',
+                    ignoreFileExtensions: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
     'gatsby-plugin-offline',
   ],
 }
