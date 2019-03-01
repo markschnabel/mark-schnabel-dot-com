@@ -6,7 +6,6 @@ description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.
   cumque ab ea amet ipsa eveniet perferendis vitae totam? Vitae
   natus necessitatibus doloremque architecto?'
 techStack: 'JavaScript, React, Gatsby, TailwindCSS, EmotionJS, Netlify'
-projectLink: '#'
 repoLink: '#'
 image: '../../images/projects/demo.jpg'
 ---

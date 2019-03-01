@@ -15,7 +15,7 @@ const Header = styled.h1`
   }
 `
 const Divider = styled.div`
-  ${tw`bg-white opacity-50 w-100% mt-8 mb-24`};
+  ${tw`bg-white opacity-50 w-100% mt-4 lg:mt-6 mb-8 lg:mb-20`};
   height: 1px;
 `
 

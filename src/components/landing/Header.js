@@ -10,8 +10,7 @@ const Wrapper = styled.div`
   margin-top: 25vh;
 `
 const LandingHeader = styled.h1`
-  ${tw`md:ml-10% font-semibold uppercase my-1 tracking-wide
-  leading-none`};
+  ${tw`md:ml-10% font-semibold uppercase my-1 tracking-wide leading-none`};
   width: 550px;
 
   & {
@@ -25,29 +24,26 @@ const LandingHeader = styled.h1`
   /* Calc is used here to give the font a minimum size of 2.5rem */
   font-size: calc(2.5rem + 3.5vw);
 
-  @media (min-width: 1200px) { 
-      font-size: 5.3rem;
-   }
+  @media (min-width: 1200px) {
+    font-size: 5.3rem;
+  }
 `
 const LandingSubHeader = styled.h2`
   ${tw`md:mt-3 md:ml-10% w-100% uppercase tracking-extra-wide leading-none`};
   & {
     .react-reveal {
       span {
-        font-weight: 200;
+        ${tw`font-secondary text-grey-light font-hairline`};
       }
     }
   }
 
-
   /* Calc is used here to give the font a minimum size of 1.2em */
   font-size: calc(1.2rem + 1vw);
 
-  
-
-  @media (min-width: 1200px) { 
-      font-size: 2.25rem;
-   }
+  @media (min-width: 1200px) {
+    font-size: 2.25rem;
+  }
 `
 const Header = () => {
   return (

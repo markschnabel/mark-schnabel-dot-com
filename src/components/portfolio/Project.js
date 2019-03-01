@@ -18,8 +18,13 @@ const Project = ({
   const flexDirection = reverse ? 'row-reverse' : 'row'
 
   return (
-    <Row style={{ flexDirection, paddingBottom: '4rem'  }}>
-      <ProjectImage image={image} reverse={reverse} />
+    <Row style={{ flexDirection, paddingBottom: '4rem' }}>
+      <ProjectImage
+        image={image}
+        reverse={reverse}
+        projectLink={projectLink}
+        repoLink={repoLink}
+      />
       <ProjectText
         title={title}
         description={description}
@@ -34,10 +39,11 @@ const Project = ({
 }
 
 Project.propTypes = {
+  image: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   projectNumber: PropTypes.string.isRequired,
-  projectLink: PropTypes.string.isRequired,
+  projectLink: PropTypes.string,
   repoLink: PropTypes.string.isRequired,
   reverse: PropTypes.bool.isRequired,
 }

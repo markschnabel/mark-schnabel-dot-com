@@ -70,9 +70,7 @@ const Portfolio = () => {
           <>
             <div>
               <SectionHeader headerText={'Portfolio'} />
-              <Grid >
-                {projectsArr}
-              </Grid>
+              <Grid>{projectsArr}</Grid>
             </div>
           </>
         )
