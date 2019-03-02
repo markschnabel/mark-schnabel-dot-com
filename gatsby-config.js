@@ -23,15 +23,22 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
+        path: `${__dirname}/src/images/`,
+        name: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
         path: `${__dirname}/src/images/projects`,
-        name: 'projectImages',
+        name: 'projectsImages',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/markdown/projects`,
-        name: 'projectMarkdown',
+        name: 'projectsMarkdown',
       },
     },
     'gatsby-transformer-sharp',
