@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Fade from 'react-reveal'
 
 const ContactInfoWrapper = styled.div`
   ${tw`text-center mt-1`};
@@ -13,14 +12,10 @@ const InfoLink = styled.a`
 const ContactInfo = () => {
   return (
     <ContactInfoWrapper>
-      <Fade bottom cascade>
         <InfoLink href="mailto:mark.schnabel@markschnabel.com" target="_top">
           mark.schnabel@markschnabel.com
         </InfoLink>
-      </Fade>
-      <Fade bottom cascade>
         <InfoLink href="tel:+6033152828">603-315-2828</InfoLink>
-      </Fade>
     </ContactInfoWrapper>
   )
 }

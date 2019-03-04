@@ -7,22 +7,20 @@ import ContactIcons from './ContactIcons'
 import ContactInfo from './ContactInfo'
 
 const MenuWrapper = styled.div`
-  ${tw`sticky pin flex flex-col items-center justify-center w-100% min-h-screen
-  bg-background lg:hidden`};
+  ${tw`fixed pin bg-background lg:hidden w-100% h-100%`};
+  opacity: ${props => (props.mobileMenuIsOpen ? '1' : '0')};
+  z-index: ${props => (props.mobileMenuIsOpen ? '1' : '0')};
+  transition: opacity 0.25s ease;
 `
 
 const MobileMenu = ({ mobileMenuIsOpen }) => {
-  if (mobileMenuIsOpen) {
-    return (
-      <MenuWrapper mobileMenuIsOpen={mobileMenuIsOpen}>
-        <Links />
+  return (
+    <MenuWrapper mobileMenuIsOpen={mobileMenuIsOpen}>
+        <Links mobileMenuIsOpen={mobileMenuIsOpen}/>
         <ContactIcons />
         <ContactInfo />
-      </MenuWrapper>
-    )
-  } else {
-    return null
-  }
+    </MenuWrapper>
+  )
 }
 
 MobileMenu.propTypes = {

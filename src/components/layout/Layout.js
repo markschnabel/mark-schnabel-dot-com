@@ -86,11 +86,11 @@ class Layout extends Component {
               toggleMobileMenu={this.toggleMobileMenu}
               mobileMenuIsOpen={this.state.mobileMenuIsOpen}
             />
+            <MobileMenu mobileMenuIsOpen={this.state.mobileMenuIsOpen} />
             <Container>
               {this.props.children}
               <Footer />
             </Container>
-            <MobileMenu mobileMenuIsOpen={this.state.mobileMenuIsOpen} />
           </>
         )}
       />

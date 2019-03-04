@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaGithub, FaBitbucket, FaLinkedin } from 'react-icons/fa'
 import styled from 'react-emotion'
-import Fade from 'react-reveal'
 
 import { colors as twColors } from '../../../../tailwind'
 
@@ -21,19 +20,20 @@ const StyledIconLink = styled.a`
 
 const ContactIcons = () => {
   return (
-    <Fade bottom cascade duration={50000} >
-      <ContactIconsWrapper>
-        <StyledIconLink>
-          <FaGithub href="https://github.com/markschnabel" target="_blank" />
-        </StyledIconLink>
-        <StyledIconLink>
-          <FaBitbucket href="" target="_blank" />
-        </StyledIconLink>
-        <StyledIconLink>
-          <FaLinkedin href="https://www.linkedin.com/in/mark-j-schnabel/" target="_blank" />
-        </StyledIconLink>
-      </ContactIconsWrapper>
-    </Fade>
+    <ContactIconsWrapper>
+      <StyledIconLink>
+        <FaGithub href="https://github.com/markschnabel" target="_blank" />
+      </StyledIconLink>
+      <StyledIconLink>
+        <FaBitbucket href="" target="_blank" />
+      </StyledIconLink>
+      <StyledIconLink>
+        <FaLinkedin
+          href="https://www.linkedin.com/in/mark-j-schnabel/"
+          target="_blank"
+        />
+      </StyledIconLink>
+    </ContactIconsWrapper>
   )
 }
 
