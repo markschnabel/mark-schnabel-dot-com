@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import {throttle} from 'lodash'
 
 // Import typefaces here to make them available globally
 import 'typeface-lato'
@@ -19,18 +20,24 @@ class Layout extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { mobileMenuIsOpen: false }
+    this.state = {
+      mobileMenuIsOpen: false,
+      navShouldBeTransparent: true,
+    }
 
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
     this.handleResize = this.handleResize.bind(this)
+    this.handleScroll = throttle(this.handleScroll.bind(this), 300)
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize)
+    window.addEventListener('scroll', this.handleScroll)
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize)
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   /**
@@ -42,6 +49,15 @@ class Layout extends Component {
   handleResize() {
     if (window.innerWidth >= parseInt(twScreens.lg.replace('px', ''))) {
       this.setState({ mobileMenuIsOpen: false })
+    }
+  }
+
+  handleScroll() {
+    console.log('confused');
+    if (window.scrollY > 10) {
+      this.setState({ navShouldBeTransparent: false })
+    } else {
+      this.setState({ navShouldBeTransparent: true })
     }
   }
 
@@ -83,6 +99,7 @@ class Layout extends Component {
               <html lang="en" />
             </Helmet>
             <Navbar
+              navShouldBeTransparent={this.state.navShouldBeTransparent}
               toggleMobileMenu={this.toggleMobileMenu}
               mobileMenuIsOpen={this.state.mobileMenuIsOpen}
             />
