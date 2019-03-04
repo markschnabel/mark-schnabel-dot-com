@@ -11,10 +11,10 @@ const Contact = () => {
       <SectionHeader headerText="Contact" />
       <Grid>
         <Row>
-          <Col lg="6">
+          <Col lg={6}>
             <ContactForm />
           </Col>
-          <Col lg="6">
+          <Col lg={6}>
             <ContactLinks />
           </Col>
         </Row>

@@ -16,9 +16,9 @@ const MenuWrapper = styled.div`
 const MobileMenu = ({ mobileMenuIsOpen }) => {
   return (
     <MenuWrapper mobileMenuIsOpen={mobileMenuIsOpen}>
-        <Links mobileMenuIsOpen={mobileMenuIsOpen}/>
-        <ContactIcons />
-        <ContactInfo />
+      <Links />
+      <ContactIcons />
+      <ContactInfo />
     </MenuWrapper>
   )
 }

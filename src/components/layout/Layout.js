@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import {throttle} from 'lodash'
+import { throttle } from 'lodash'
 
 // Import typefaces here to make them available globally
 import 'typeface-lato'
@@ -52,8 +52,13 @@ class Layout extends Component {
     }
   }
 
+  /**
+   * Window scroll listener to change the color of the background from transparent
+   * to the site's background color designated in the tw config file whenever the
+   * has scrolled down from the top of the page. Throttled in the constructor by
+   * 300ms
+   */
   handleScroll() {
-    console.log('confused');
     if (window.scrollY > 10) {
       this.setState({ navShouldBeTransparent: false })
     } else {

@@ -21,7 +21,7 @@ const Underline = styled.div`
 
 function createSkills(skillsString) {
   return skillsString.split(', ').map(skillName => {
-    return <Skill name={skillName} />
+    return <Skill key={'skill-' + skillName} name={skillName} />
   })
 }
 
