@@ -41,7 +41,10 @@ const ProfilePicture = () => {
             <div>
               <Fade top delay={50} distance="25px">
                 <ImageContainer>
-                  <Img fluid={data.file.childImageSharp.fluid} />
+                  <Img
+                    style={{ borderRadius: '5px' }}
+                    fluid={data.file.childImageSharp.fluid}
+                  />
                 </ImageContainer>
               </Fade>
             </div>

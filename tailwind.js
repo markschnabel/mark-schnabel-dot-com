@@ -51,6 +51,7 @@ let colors = {
   highlight: '#487B78',
   black: '#000',
   'grey-dark': '#222',
+  'grey': '#a2a7af',
   'grey-light': '#ddd',
   white: '#F2F1ED',
 }

@@ -10,7 +10,10 @@ const Portfolio = () => {
     <StaticQuery
       query={graphql`
         query projectDataQuery {
-          allMarkdownRemark(sort: { fields: frontmatter___projectNumber }) {
+          allMarkdownRemark(
+            sort: { fields: frontmatter___projectNumber },
+            filter: {fileAbsolutePath: {regex: "/(projects)\/.*\\.md$/"}}
+            ) {
             edges {
               node {
                 id
@@ -67,6 +70,8 @@ const Portfolio = () => {
         })
 
         return (
+        
+
           <>
             <div>
               <SectionHeader headerText={'Portfolio'} />

@@ -17,10 +17,10 @@ const BioTitle = styled.h2`
 `
 const Underline = styled.div`
   ${tw`bg-white w-100% mb-2 max-w-12 m-auto lg:m-0 mb-4`};
-  height: 2px;
+  height: 1px;
 `
 const BioBody = styled.p`
-  ${tw`text-base my-1 font-hairline text-grey-light tracking-wide pt-2 lg:mt-0 mb-4`};
+  ${tw`text-base font-secondary my-1 font-hairline text-grey-light tracking-wide pt-2 lg:mt-0 mb-4`};
   @media only screen and (max-width: 576px) {
     font-size: 0.95rem;
   }
@@ -36,20 +36,19 @@ const ResumeButton = styled.button`
   }
 `
 
-const Bio = () => {
+const Bio = ({ bioText }) => {
   return (
     <Fade bottom delay={50} distance="25px">
       <BioWrapper>
         <div>
-          <BioTitle>Bio</BioTitle>
-          <Underline />
-          <BioBody>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            ea libero nihil repudiandae suscipit sit aliquam rerum et quaerat,
-            architecto facere cupiditate eaque facilis quidem! Mollitia totam
-            exercitationem recusandae id? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit.
-          </BioBody>
+          <Fade left delay={50} distance="25px">
+            <BioTitle>Bio</BioTitle>
+          </Fade>
+
+          <Fade right delay={50} distance="25px">
+            <Underline />
+          </Fade>
+          <BioBody>{bioText}</BioBody>
         </div>
         <div>
           <ResumeButton>RESUME (PDF)</ResumeButton>
