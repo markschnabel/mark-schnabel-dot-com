@@ -7,7 +7,7 @@ import ContactIcons from './ContactIcons'
 import ContactInfo from './ContactInfo'
 
 const MenuWrapper = styled.div`
-  ${tw`fixed pin flex flex-col items-center justify-center w-100% min-h-screen
+  ${tw`sticky pin flex flex-col items-center justify-center w-100% min-h-screen
   bg-background lg:hidden`};
 `
 

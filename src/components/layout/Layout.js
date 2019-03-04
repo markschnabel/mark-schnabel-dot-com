@@ -13,6 +13,7 @@ import { screens as twScreens } from '../../../tailwind'
 import Container from '../shared/Container'
 import Navbar from './navbar/Navbar'
 import MobileMenu from './mobileMenu/MobileMenu'
+import Footer from './Footer'
 
 class Layout extends Component {
   constructor(props) {
@@ -85,7 +86,10 @@ class Layout extends Component {
               toggleMobileMenu={this.toggleMobileMenu}
               mobileMenuIsOpen={this.state.mobileMenuIsOpen}
             />
-            <Container>{this.props.children}</Container>
+            <Container>
+              {this.props.children}
+              <Footer />
+            </Container>
             <MobileMenu mobileMenuIsOpen={this.state.mobileMenuIsOpen} />
           </>
         )}
