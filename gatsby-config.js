@@ -1,8 +1,30 @@
+const proxy = require("http-proxy-middleware")
+
 module.exports = {
   siteMetadata: {
     title: 'Mark Schnabel - Software Developer',
     description: 'Software development portfolio website for Mark Schnabel.',
     keywords: 'Software Development, Portfolio, Mark Schnabel',
+    contactLinks: {
+      github: 'https://github.com/markschnabel',
+      linkedIn: 'https://www.linkedin.com/in/mark-j-schnabel/',
+      bitBucket: '',
+      phone: '1-603-315-2828',
+      email: 'mark.schnabel@markschnabel.com',
+    },
+  },
+  // Middleware for the dev server, used for developing the lambda functions in
+  // unison with the front end
+  developMiddleware: app => {
+    app.use(
+      "/.netlify/functions/",
+      proxy({
+        target: "http://localhost:9000",
+        pathRewrite: {
+          "/.netlify/functions/": "",
+        },
+      })
+    )
   },
   plugins: [
     'gatsby-plugin-tailwindcss',

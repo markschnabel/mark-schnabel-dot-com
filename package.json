@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Mark Schnabel <mark.schnabel@markschnabel.com>",
   "dependencies": {
+    "axios": "^0.18.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "gatsby": "^2.1.23",
@@ -19,7 +20,9 @@
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-remark": "^2.3.1",
     "gatsby-transformer-sharp": "^2.1.15",
+    "googleapis": "^37.2.0",
     "lodash": "^4.17.11",
+    "nodemailer": "^5.1.1",
     "prop-types": "^15.6.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -31,7 +34,8 @@
     "react-scroll": "^1.7.11",
     "tailwindcss": "^0.6.6",
     "typeface-inter": "^3.2.0",
-    "typeface-lato": "0.0.54"
+    "typeface-lato": "0.0.54",
+    "validator": "^10.11.0"
   },
   "keywords": [
     "gatsby",
@@ -42,12 +46,18 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lambda-serve": "netlify-lambda serve backend/functions",
+    "lambda-build": "netlify-lambda build backend/functions",
+    "serve-develop": "concurrently \"gatsby develop\" \"netlify-lambda build backend/functions\""
   },
   "devDependencies": {
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
+    "http-proxy-middleware": "^0.19.1",
+    "netlify-lambda": "^1.4.2",
     "prettier": "^1.14.2"
   },
   "repository": {
