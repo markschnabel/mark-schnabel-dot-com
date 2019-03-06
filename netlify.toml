@@ -1,2 +1,4 @@
 [build]
-  functions = "./backend/lambda"
+  command = "npm run build"
+  publish = "public"
+  functions = "lambda"

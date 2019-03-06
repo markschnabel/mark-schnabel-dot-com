@@ -1,13 +1,5 @@
 import validator from 'validator'
-
-function isEmpty(input) {
-  return (
-    input === undefined ||
-    input === null ||
-    (typeof input === 'object' && Object.keys(input).length === 0) ||
-    (typeof input === 'string' && input.trim().length === 0)
-  )
-}
+import isEmpty from '../../utils/isEmpty'
 
 function validate(requestBody) {
   const requiredFields = ['email', 'subject', 'message']
@@ -17,7 +9,7 @@ function validate(requestBody) {
   // Ensure all fields are present
   for (let i = 0; i < requiredFields.length; i++) {
     const fieldName = requiredFields[i]
-    
+
     if (!(fieldName in requestBody)) {
       errors[fieldName] = `${fieldName.charAt(0).toUpperCase() +
         fieldName.slice(1)} field is required.`
@@ -27,7 +19,7 @@ function validate(requestBody) {
   if (!isEmpty(errors)) {
     return {
       isValid: false,
-      errors
+      errors,
     }
   }
 
@@ -44,25 +36,25 @@ function validate(requestBody) {
   if (!isEmpty(errors)) {
     return {
       isValid: false,
-      errors
+      errors,
     }
   }
 
   // Ensure all required fields meet any other specifications.
-  if (!(validator.isLength(requestBody['subject']), { min: 5, max: 100 })) {
-    errors['subject'] = 'Must be between 5-100 characters.'
+  if (!validator.isLength(requestBody['subject'], { min: 5, max: 100 })) {
+    errors.subject = 'Must be between 5-100 characters.'
   }
-  if (!(validator.isLength(requestBody['message']), { min: 10, max: 1000 })) {
-    errors['message'] = 'Must be between 10-1000 characters.'
+  if (!validator.isLength(requestBody['message'], { min: 10, max: 1000 })) {
+    errors.message = 'Must be between 10-1000 characters.'
   }
   if (!validator.isEmail(requestBody['email'])) {
-    errors['email'] = 'Must be a valid email address.'
+    errors.email = 'Must be a valid email address.'
   }
 
   if (!isEmpty(errors)) {
     return {
       isValid: false,
-      errors
+      errors,
     }
   }
 
@@ -72,4 +64,4 @@ function validate(requestBody) {
   }
 }
 
-export { isEmpty, validate }
+export default validate

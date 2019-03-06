@@ -32,6 +32,7 @@
     "react-icons": "^3.5.0",
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.7.11",
+    "react-svg-spinner": "^1.0.4",
     "tailwindcss": "^0.6.6",
     "typeface-inter": "^3.2.0",
     "typeface-lato": "0.0.54",
@@ -43,21 +44,23 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "lambda-serve": "netlify-lambda serve backend/functions",
-    "lambda-build": "netlify-lambda build backend/functions",
-    "serve-develop": "concurrently \"gatsby develop\" \"netlify-lambda build backend/functions\""
+    "start": "run-p start:**",
+    "start:app": "npm run develop",
+    "start:lambda": "netlify-lambda serve src/functions",
+    "build": "run-p build:**",
+    "build:app": "gatsby build",
+    "build:lambda": "netlify-lambda build src/functions"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
     "dotenv": "^6.2.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
     "http-proxy-middleware": "^0.19.1",
     "netlify-lambda": "^1.4.2",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.14.2"
   },
   "repository": {

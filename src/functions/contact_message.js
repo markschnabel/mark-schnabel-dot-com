@@ -1,14 +1,15 @@
-import { isEmpty, validate } from '../validators'
-import sendEmail from '../sendEmail'
+import validate from './helpers/validate'
+import isEmpty from '../utils/isEmpty'
+import sendEmail from './helpers/sendEmail'
 
 exports.handler = function(event, _, callback) {
   /**
    * Function to serve a response to the client
    * @param {The object to send back to the client} body
    */
-  const send = body => {
+  const send = (statusCode, body) => {
     callback(null, {
-      statusCode: 200,
+      statusCode,
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers':
@@ -20,7 +21,8 @@ exports.handler = function(event, _, callback) {
 
   // If no data whatsoever has been provided cancel
   if (isEmpty(event.body)) {
-    send({ error: 'No input fields provided' })
+    send(400, { errors: { general: 'No input fields provided' } })
+    return
   }
 
   let requestBody
@@ -29,13 +31,15 @@ exports.handler = function(event, _, callback) {
   try {
     requestBody = JSON.parse(event.body)
   } catch {
-    send({ error: 'Input was not parsable.' })
+    send(400, { errors: { general: 'Input was not parsable.' } })
+    return
   }
 
   const { isValid, errors } = validate(requestBody)
 
   if (!isValid) {
-    send(errors)
+    send(400, { errors })
+    return
   }
 
   // Create email
@@ -54,16 +58,18 @@ exports.handler = function(event, _, callback) {
   // Send email & return success/error
   sendEmail(options)
     .then(() => {
-      send({
+      send(200, {
         success:
-          'Success! Your message has been sent to me. I will review it and get back to you as soon as possible!',
+          "Success! Your message has been sent. I'll review it and get back to you as soon as possible! Thank you.",
       })
     })
     .catch(_err => {
-      send({
-        error: `Sorry! It seems something has gone wrong while processing your message. 
+      send(400, {
+        errors: {
+          general: `Sorry! It seems something has gone wrong while processing your message.
         Please try again shortly or feel free to contact me using one of the designated methods listed next to this form.
         Thank you for your patience`,
+        },
       })
     })
 }

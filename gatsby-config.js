@@ -1,4 +1,4 @@
-const proxy = require("http-proxy-middleware")
+let proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
@@ -13,15 +13,15 @@ module.exports = {
       email: 'mark.schnabel@markschnabel.com',
     },
   },
-  // Middleware for the dev server, used for developing the lambda functions in
-  // unison with the front end
+  // for avoiding CORS while developing Netlify Functions locally
+  // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
   developMiddleware: app => {
     app.use(
-      "/.netlify/functions/",
+      '/.netlify/functions/',
       proxy({
-        target: "http://localhost:9000",
+        target: 'http://localhost:9000',
         pathRewrite: {
-          "/.netlify/functions/": "",
+          '/.netlify/functions/': '',
         },
       })
     )
