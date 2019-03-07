@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'react-emotion'
-import Fade from 'react-reveal'
 
 const StyledList = styled.ul`
   ${tw`list-reset text-center pt-48 m-auto`};
@@ -10,26 +9,20 @@ const StyledLink = styled.a`
   transition: color 0.5s ease;
 `
 
-const Links = () => {
+const PageLinks = () => {
   return (
     <StyledList>
       <li>
-        <StyledLink>
-            PORTFOLIO
-        </StyledLink>
+        <StyledLink>PORTFOLIO</StyledLink>
       </li>
       <li>
-        <StyledLink>
-            ABOUT
-        </StyledLink>
+        <StyledLink>ABOUT</StyledLink>
       </li>
       <li>
-        <StyledLink>
-            CONTACT
-        </StyledLink>
+        <StyledLink>CONTACT</StyledLink>
       </li>
     </StyledList>
   )
 }
 
-export default Links
+export default PageLinks

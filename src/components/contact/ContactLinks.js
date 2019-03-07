@@ -21,7 +21,7 @@ const StyledIconLink = styled.a`
       transition: all 0.5s ease;
     }
   }
-  
+
   &:hover {
     svg {
       fill: ${twColors['accent']};
@@ -29,12 +29,12 @@ const StyledIconLink = styled.a`
   }
 `
 const StyledTextLink = styled.a`
-  ${tw`block text-lg lg:text-xl underline font-light italic cursor-pointer hover:text-accent`};
+  ${tw`block text-lg lg:text-xl underline font-light italic cursor-pointer hover:text-accent pb-4`};
   transition: all 0.5s ease;
 `
-const ResumeButton = styled.button`
-  ${tw`border-solid border-2px border-white text-white bg-transparent py-2 
-  text-lg font-thin cursor-pointer w-100% my-2 uppercase
+const ResumeLink = styled.a`
+  ${tw`block border-solid border-2px border-white text-white bg-transparent py-2 px-3
+  text-lg font-thin cursor-pointer w-100% my-2 uppercase no-underline
   hover:bg-white hover:text-black inline mr-5%`};
   transition: all 0.3s ease;
   max-width: 260px;
@@ -54,14 +54,14 @@ const ContactLinks = () => {
               <FaGithub />
             </StyledIconLink>
             <StyledIconLink
-              href="http://"
+              href="http://linkedin.com/in/mark-j-schnabel"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaLinkedin />
             </StyledIconLink>
             <StyledIconLink
-              href="http://linkedin.com/in/mark-j-schnabel"
+              href="https://bitbucket.org/markschnabel/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -79,8 +79,20 @@ const ContactLinks = () => {
           <StyledTextLink href="tel:+">603-315-2828</StyledTextLink>
         </Section>
         <Section>
-          <ResumeButton>RESUME (PDF)</ResumeButton>
-          <ResumeButton>RESUME (DOC) </ResumeButton>
+          <ResumeLink
+            href="https://drive.google.com/file/d/1E9ZZ1g5e_G0FCYQaIKDE0hc5yEFvLurz/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RESUME (PDF)
+          </ResumeLink>
+          <ResumeLink
+            href="https://drive.google.com/file/d/18xEFbp0lZS1_p963fXMMhPj7w80bIS1X/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RESUME (DOC)
+          </ResumeLink>
         </Section>
       </Fade>
     </ContactLinksContainer>

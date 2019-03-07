@@ -21,17 +21,26 @@ const StyledIconLink = styled.a`
 const ContactIcons = () => {
   return (
     <ContactIconsWrapper>
-      <StyledIconLink>
-        <FaGithub href="https://github.com/markschnabel" target="_blank" />
+      <StyledIconLink
+        href="https://github.com/markschnabel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub />
       </StyledIconLink>
-      <StyledIconLink>
-        <FaBitbucket href="" target="_blank" />
+      <StyledIconLink
+        href="https://www.linkedin.com/in/mark-j-schnabel/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin />
       </StyledIconLink>
-      <StyledIconLink>
-        <FaLinkedin
-          href="https://www.linkedin.com/in/mark-j-schnabel/"
-          target="_blank"
-        />
+      <StyledIconLink
+        href="https://bitbucket.org/markschnabel/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaBitbucket />
       </StyledIconLink>
     </ContactIconsWrapper>
   )

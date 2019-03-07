@@ -11,18 +11,34 @@ const IconLinkStyle = css`
   ${tw`text-lg ml-6 text-grey-light cursor-pointer`};
   transition: all 0.25s ease;
   &:hover {
-    fill: #B8572C;
+    fill: #b8572c;
   }
 `
 
 const ContactIcons = () => {
   return (
     <IconLinksWrapper>
-      <a href="https://github.com/markschnabel" target="_blank" rel="noopener noreferrer">
+      <a
+        href="https://github.com/markschnabel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaGithub className={IconLinkStyle} />
       </a>
-      <FaLinkedin className={IconLinkStyle} />
-      <FaBitbucket className={IconLinkStyle} />
+      <a
+        href="http://linkedin.com/in/mark-j-schnabel"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaLinkedin className={IconLinkStyle} />
+      </a>
+      <a
+        href="https://bitbucket.org/markschnabel/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaBitbucket className={IconLinkStyle} />
+      </a>
     </IconLinksWrapper>
   )
 }

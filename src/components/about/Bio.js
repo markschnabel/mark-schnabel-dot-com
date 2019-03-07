@@ -25,9 +25,9 @@ const BioBody = styled.p`
     font-size: 0.95rem;
   }
 `
-const ResumeButton = styled.button`
-  ${tw`border-solid border-2px border-white text-white bg-transparent py-2 
-  text-lg font-thin cursor-pointer w-100% my-2
+const ResumeLink = styled.a`
+  ${tw`border-solid border-2px border-white text-white bg-transparent py-2 px-3
+  text-lg font-thin cursor-pointer w-100% my-2 no-underline
   hover:bg-white hover:text-black inline mr-5%`};
   transition: all 0.3s ease;
 
@@ -51,8 +51,20 @@ const Bio = ({ bioText }) => {
           <BioBody>{bioText}</BioBody>
         </div>
         <div>
-          <ResumeButton>RESUME (PDF)</ResumeButton>
-          <ResumeButton>RESUME (DOC)</ResumeButton>
+          <ResumeLink
+            href="https://drive.google.com/file/d/1E9ZZ1g5e_G0FCYQaIKDE0hc5yEFvLurz/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RESUME (PDF)
+          </ResumeLink>
+          <ResumeLink
+            href="https://drive.google.com/file/d/18xEFbp0lZS1_p963fXMMhPj7w80bIS1X/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RESUME (DOC)
+          </ResumeLink>
         </div>
       </BioWrapper>
     </Fade>

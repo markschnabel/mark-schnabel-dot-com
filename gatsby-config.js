@@ -5,13 +5,6 @@ module.exports = {
     title: 'Mark Schnabel - Software Developer',
     description: 'Software development portfolio website for Mark Schnabel.',
     keywords: 'Software Development, Portfolio, Mark Schnabel',
-    contactLinks: {
-      github: 'https://github.com/markschnabel',
-      linkedIn: 'https://www.linkedin.com/in/mark-j-schnabel/',
-      bitBucket: '',
-      phone: '1-603-315-2828',
-      email: 'mark.schnabel@markschnabel.com',
-    },
   },
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying

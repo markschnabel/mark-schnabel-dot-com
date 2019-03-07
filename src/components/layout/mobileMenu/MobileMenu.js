@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'react-emotion'
 
-import Links from './Links'
+import PageLinks from './PageLinks'
 import ContactIcons from './ContactIcons'
 import ContactInfo from './ContactInfo'
 
@@ -16,7 +16,7 @@ const MenuWrapper = styled.div`
 const MobileMenu = ({ mobileMenuIsOpen }) => {
   return (
     <MenuWrapper mobileMenuIsOpen={mobileMenuIsOpen}>
-      <Links />
+      <PageLinks />
       <ContactIcons />
       <ContactInfo />
     </MenuWrapper>
