@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
+import { Link as SmoothScrollLink } from 'react-scroll'
 
 const StyledList = styled.ul`
   ${tw`list-reset hidden lg:inline-block`};
@@ -7,7 +8,7 @@ const StyledList = styled.ul`
 const StyledListItem = styled.ul`
   ${tw`list-reset inline-block`};
 `
-const StyledLink = styled.a`
+const StyledScrollLink = styled(SmoothScrollLink)`
   ${tw`font-light tracking-extra-wide text-lg ml-6 cursor-pointer hover:text-accent`};
   transition: all 0.5s ease;
 `
@@ -16,13 +17,25 @@ const Links = () => {
   return (
     <StyledList>
       <StyledListItem>
-        <StyledLink>PORTFOLIO</StyledLink>
+        <StyledScrollLink
+          to="portfolioSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
+          PORTFOLIO
+        </StyledScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <StyledLink>ABOUT</StyledLink>
+        <StyledScrollLink to="aboutSection" spy={true} smooth={true} duration={500} offset={-70}>
+          ABOUT
+        </StyledScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <StyledLink>CONTACT</StyledLink>
+        <StyledScrollLink to="contactSection" spy={true} smooth={true} duration={500} offset={-70}>
+          CONTACT
+        </StyledScrollLink>
       </StyledListItem>
     </StyledList>
   )

@@ -13,10 +13,10 @@ const MenuWrapper = styled.div`
   transition: opacity 0.25s ease;
 `
 
-const MobileMenu = ({ mobileMenuIsOpen }) => {
+const MobileMenu = ({ mobileMenuIsOpen, closeMobileMenu }) => {
   return (
     <MenuWrapper mobileMenuIsOpen={mobileMenuIsOpen}>
-      <PageLinks />
+      <PageLinks closeMobileMenu={closeMobileMenu} />
       <ContactIcons />
       <ContactInfo />
     </MenuWrapper>
@@ -25,6 +25,7 @@ const MobileMenu = ({ mobileMenuIsOpen }) => {
 
 MobileMenu.propTypes = {
   mobileMenuIsOpen: PropTypes.bool.isRequired,
+  closeMobileMenu: PropTypes.func.isRequired,
 }
 
 export default MobileMenu

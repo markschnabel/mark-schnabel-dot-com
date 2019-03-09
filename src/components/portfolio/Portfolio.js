@@ -70,8 +70,6 @@ const Portfolio = () => {
         })
 
         return (
-        
-
           <>
             <div>
               <SectionHeader headerText={'Portfolio'} />

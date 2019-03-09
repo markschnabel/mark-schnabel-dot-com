@@ -28,6 +28,7 @@ class Layout extends Component {
     this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
     this.handleResize = this.handleResize.bind(this)
     this.handleScroll = throttle(this.handleScroll.bind(this), 300)
+    this.closeMobileMenu = this.closeMobileMenu.bind(this)
   }
 
   componentDidMount() {
@@ -66,10 +67,20 @@ class Layout extends Component {
     }
   }
 
+  /**
+   * Function used to toggle the mobile menu when the mobile menu button is clicked
+   */
   toggleMobileMenu() {
     this.setState(prevState => ({
       mobileMenuIsOpen: !prevState.mobileMenuIsOpen,
     }))
+  }
+
+  /**
+   * Function used to close the mobile menu whenever a scroll link is clicked
+   */
+  closeMobileMenu() {
+    this.setState({ mobileMenuIsOpen: false })
   }
 
   render() {
@@ -107,8 +118,12 @@ class Layout extends Component {
               navShouldBeTransparent={this.state.navShouldBeTransparent}
               toggleMobileMenu={this.toggleMobileMenu}
               mobileMenuIsOpen={this.state.mobileMenuIsOpen}
+              closeMobileMenu={this.closeMobileMenu}
             />
-            <MobileMenu mobileMenuIsOpen={this.state.mobileMenuIsOpen} />
+            <MobileMenu
+              mobileMenuIsOpen={this.state.mobileMenuIsOpen}
+              closeMobileMenu={this.closeMobileMenu}
+            />
             <Container>
               {this.props.children}
               <Footer />

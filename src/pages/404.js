@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'react-emotion'
 import { Link } from 'gatsby'
 
+import '../components/layout/layout.css'
+
 const Wrapper = styled.div`
   ${tw`text-center`}
 `

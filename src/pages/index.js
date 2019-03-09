@@ -1,4 +1,5 @@
 import React from 'react'
+import { Element } from 'react-scroll'
 
 import Layout from '../components/layout/Layout'
 import Landing from '../components/landing/Landing'
@@ -9,9 +10,15 @@ import Contact from '../components/contact/Contact'
 const IndexPage = () => (
   <Layout>
     <Landing />
-    <Portfolio />
-    <About />
-    <Contact />
+    <Element name="portfolioSection">
+      <Portfolio />
+    </Element>
+    <Element name="aboutSection">
+      <About />
+    </Element>
+    <Element name="contactSection">
+      <Contact />
+    </Element>
   </Layout>
 )
 

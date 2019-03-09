@@ -22,12 +22,13 @@ const Navbar = ({
   navShouldBeTransparent,
   toggleMobileMenu,
   mobileMenuIsOpen,
+  closeMobileMenu,
 }) => {
   return (
     <StyledNav navShouldBeTransparent={navShouldBeTransparent}>
       <Container>
         <FlexContainer>
-          <Brand />
+          <Brand closeMobileMenu={closeMobileMenu} />
           <MobileMenuButton
             toggleMobileMenu={toggleMobileMenu}
             mobileMenuIsOpen={mobileMenuIsOpen}
