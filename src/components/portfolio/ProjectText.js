@@ -100,7 +100,7 @@ const ProjectText = ({
             <TextSectionBody>{techStack}</TextSectionBody>
           </div>
           <LinksWrapper>
-            {projectLink ? (
+            {projectLink.length >= 1 ? (
               <Link
                 href={projectLink}
                 target="_blank"

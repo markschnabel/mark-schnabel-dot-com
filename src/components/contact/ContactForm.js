@@ -128,11 +128,11 @@ export class ContactForm extends Component {
       errors.email = 'Must be a valid email address.'
     }
 
-    await this.setErrors(errors)
-
-    if (!isEmpty(errors)) {
-      return
-    }
+    this.setErrors(errors, () => {
+      if (!isEmpty(errors)) {
+        return
+      }
+    })
 
     axios
       .post(LAMBDA_URI, {
@@ -144,6 +144,7 @@ export class ContactForm extends Component {
         message,
       })
       .then(res => {
+        console.log(res)
         this.setSuccess(res.data.success)
       })
       .catch(err => {

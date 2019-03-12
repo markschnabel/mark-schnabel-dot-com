@@ -1,7 +1,9 @@
 ---
-bio: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ea libero nihil repudiandae suscipit sit aliquam 
-rerum et quaerat, architecto facere cupiditate eaque facilis quidem! Mollitia totam exercitationem recusandae id? Lorem 
-ipsum dolor sit amet consectetur adipisicing elit.'
+bio: "Hey I'm Mark. I'm a Computer Science student at Southern New Hampshire University.
+Throughout my time in school I've been exposed to a ton of awesome technologies and
+concepts, and have developed a strong passion for Software Engineering. I'm excited
+by all things related to software, but am primarily interested in Full Stack development
+and Machine Learning. Feel free to get in contact if you'd like to know more!"
 programmingLanguages: 'Python, Java, JavaScript, Node.js, C++, HTML, CSS, SQL'
 libsAndFrameworks: 'Flask, Express, React, Redux, Gatsby, Tailwind, GraphQL, OpenCV, Numpy, JUnit'
 toolsEnvsDatabases: 'Git, GitHub, Linux, PostgreSQL, MySQL, MongoDB, Postman, Eclipse, Visual Studio, IntelliJ'

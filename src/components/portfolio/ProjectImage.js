@@ -37,8 +37,8 @@ const HoverText = styled.p`
 const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
   // Since the project may not be hosted anywhere this should default to use the
   // repository link
-  const link = projectLink ? projectLink : repoLink
-  const hoverText = projectLink ? 'Visit Project' : 'View Source'
+  const link = projectLink.length >= 1 ? projectLink : repoLink
+  const hoverText = projectLink.length >= 1 ? 'Visit Project' : 'View Source'
 
   return (
     <Col lg={6} style={{ padding: 0 }}>
@@ -49,9 +49,9 @@ const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
         right={reverse ? true : false}
       >
         <ImageContainer>
-          <a href={'link'} target="_blank" rel="noopener noreferrer">
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <StyledImg fluid={image.childImageSharp.fluid} />
-            <HoverOverlay href={link} target="_blank" rel="noopener noreferrer">
+            <HoverOverlay>
               <HoverText>{hoverText}</HoverText>
             </HoverOverlay>
           </a>
