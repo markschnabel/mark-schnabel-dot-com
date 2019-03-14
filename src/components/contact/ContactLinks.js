@@ -32,12 +32,14 @@ const StyledTextLink = styled.a`
   ${tw`block text-lg lg:text-xl underline font-light italic cursor-pointer hover:text-accent pb-4`};
   transition: all 0.5s ease;
 `
+
 const ResumeLink = styled.a`
-  ${tw`block border-solid border-2px border-white text-white bg-transparent py-2 px-3
-  text-lg font-thin cursor-pointer w-100% my-2 uppercase no-underline
+  ${tw` border-2px border-solid border-white text-white bg-transparent 
+  py-2 text-lg font-thin cursor-pointer my-2 uppercase no-underline
   hover:bg-white hover:text-black inline mr-5%`};
+  width: 250px !important;
+  display: block !important;
   transition: all 0.3s ease;
-  max-width: 260px;
 `
 
 const ContactLinks = () => {
@@ -86,7 +88,9 @@ const ContactLinks = () => {
           >
             RESUME (PDF)
           </ResumeLink>
-          <ResumeLink
+        </Section>
+        <Section>
+        <ResumeLink
             href="https://drive.google.com/file/d/18xEFbp0lZS1_p963fXMMhPj7w80bIS1X/view"
             target="_blank"
             rel="noopener noreferrer"

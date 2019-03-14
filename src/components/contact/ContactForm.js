@@ -262,7 +262,6 @@ export class ContactForm extends Component {
             placeholder="Message (Required)"
             value={this.state.message}
             onChange={e => this.handleChange(e)}
-            required
           />
           <HelperText error={'message' in errors}>
             {'message' in errors
