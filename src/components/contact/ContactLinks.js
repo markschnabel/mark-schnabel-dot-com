@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa'
 import Fade from 'react-reveal/Fade'
 

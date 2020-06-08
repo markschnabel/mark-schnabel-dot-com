@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Fade from 'react-reveal/Fade'
 
 const StyledFooter = styled.footer`

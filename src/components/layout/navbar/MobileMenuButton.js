@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const StyledButton = styled.button`
   ${tw`flex flex-col items-center outline-none bg-transparent border-none 

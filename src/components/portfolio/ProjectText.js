@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Col } from 'react-flexbox-grid'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import Fade from 'react-reveal/Fade'
 

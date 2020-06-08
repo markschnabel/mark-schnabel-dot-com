@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const SkillStyle = styled.p`
   ${tw`bg-grey px-3 py-2 font-semibold text-black inline-block m-1 `};

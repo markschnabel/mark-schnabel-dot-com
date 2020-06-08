@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Row, Col } from 'react-flexbox-grid'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { StaticQuery, graphql } from 'gatsby'
 import Fade from 'react-reveal/Fade'
 
