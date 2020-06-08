@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Col } from 'react-flexbox-grid'
 import Img from 'gatsby-image'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Fade from 'react-reveal/Fade'
 
 const ImageContainer = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa'
-import styled, { css } from 'react-emotion'
+import { css } from 'emotion'
+import styled from '@emotion/styled'
 
 const IconLinksWrapper = styled.div`
   ${tw`absolute flex justify-end w-100%`};

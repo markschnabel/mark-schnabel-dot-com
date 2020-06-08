@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const HeaderText = styled.h2`
   ${tw`m-0 tracking-wide font-semibold uppercase mt-8 text-center mb-2`};

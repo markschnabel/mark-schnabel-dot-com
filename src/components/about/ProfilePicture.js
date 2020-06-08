@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import Fade from 'react-reveal/Fade'
 
 const ImageContainer = styled.div`

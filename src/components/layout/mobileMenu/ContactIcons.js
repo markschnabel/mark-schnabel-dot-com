@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub, FaBitbucket, FaLinkedin } from 'react-icons/fa'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 import { colors as twColors } from '../../../../tailwind'
 

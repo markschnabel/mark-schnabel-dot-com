@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 const Wrapper = styled.div`
   ${tw`absolute w-100% h-100% flex justify-center items-center`};
