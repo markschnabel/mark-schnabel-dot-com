@@ -16,6 +16,18 @@ const PageLinks = ({ closeMobileMenu }) => {
     <StyledList>
       <li>
         <StyledLink
+          to="experienceSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+          onClick={closeMobileMenu}
+        >
+          EXPERIENCE
+        </StyledLink>
+      </li>
+      <li>
+        <StyledLink
           to="portfolioSection"
           spy={true}
           smooth={true}

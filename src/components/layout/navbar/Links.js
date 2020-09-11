@@ -18,6 +18,17 @@ const Links = () => {
     <StyledList>
       <StyledListItem>
         <StyledScrollLink
+          to="experienceSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
+          EXPERIENCE
+        </StyledScrollLink>
+      </StyledListItem>
+      <StyledListItem>
+        <StyledScrollLink
           to="portfolioSection"
           spy={true}
           smooth={true}
@@ -28,12 +39,24 @@ const Links = () => {
         </StyledScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <StyledScrollLink to="aboutSection" spy={true} smooth={true} duration={500} offset={-70}>
+        <StyledScrollLink
+          to="aboutSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
           ABOUT
         </StyledScrollLink>
       </StyledListItem>
       <StyledListItem>
-        <StyledScrollLink to="contactSection" spy={true} smooth={true} duration={500} offset={-70}>
+        <StyledScrollLink
+          to="contactSection"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-70}
+        >
           CONTACT
         </StyledScrollLink>
       </StyledListItem>
