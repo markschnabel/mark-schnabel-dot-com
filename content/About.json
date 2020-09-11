@@ -1,6 +1,7 @@
 [
   {
-    "bio": "Hey I'm Mark. I'm a Computer Science student at Southern New Hampshire University. Throughout my time in school I've been exposed to a ton of awesome technologies and concepts, and have developed a strong passion for Software Engineering. I'm excited by all things related to software, but am primarily interested in Full Stack development and Machine Learning. Feel free to get in contact if you'd like to know more!",
+    "professionalBio": "Hey, I'm Mark. I'm a professional Software Engineer focused on Full-Stack development. I have a strong passion for building out applications that provide a great experience to users and am interested in working on all areas of stack, from front end web applications, to low level API developement, to mobile development.",
+    "personalBio": "In my free time I like to hang out with my friends and my dog, go outside as much as possible and draw.",
     "programmingLanguages": [
       "JavaScript",
       "Node",
@@ -15,10 +16,10 @@
       "Vue.js",
       "Vuex",
       "React",
+      "Gatsby",
       "Ruby on Rails",
       "Flask",
-      "Express",
-      "Gatsby"
+      "Express"
     ],
     "toolsEnvsDatabases": [
       "Git",

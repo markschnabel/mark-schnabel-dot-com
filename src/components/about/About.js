@@ -32,7 +32,8 @@ const About = () => {
       query={graphql`
         query aboutDataQuery {
           aboutJson {
-            bio
+            professionalBio
+            personalBio
             programmingLanguages
             libsAndFrameworks
             toolsEnvsDatabases
@@ -42,7 +43,8 @@ const About = () => {
 
       render={({ aboutJson }) => {
         const {
-          bio,
+          professionalBio,
+          personalBio,
           programmingLanguages,
           libsAndFrameworks,
           toolsEnvsDatabases
@@ -58,7 +60,7 @@ const About = () => {
                     <ProfilePicture />
                   </Col>
                   <Col lg={6} style={{ padding: 0 }}>
-                    <Bio bioText={bio} />
+                    <Bio professionalBio={professionalBio} personalBio={personalBio} />
                   </Col>
                 </Row>
                 <Row>

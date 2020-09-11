@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import Fade from 'react-reveal/Fade';
 
@@ -12,13 +13,16 @@ const BioWrapper = styled.div`
     min-height: 350px;
   }
 `;
+
 const BioTitle = styled.h2`
   ${tw`text-xl m-0 tracking-wide font-semibold uppercase`};
 `;
+
 const Underline = styled.div`
   ${tw`bg-white w-100% mb-2 max-w-12 m-auto lg:m-0 mb-4`};
   height: 1px;
 `;
+
 const BioBody = styled.p`
   ${tw`text-base font-secondary my-1 font-light text-grey-light tracking-wide pt-2 lg:mt-0 mb-12 lg:mb-4`};
   font-size: 16px;
@@ -27,6 +31,7 @@ const BioBody = styled.p`
     font-size: 0.95rem;
   }
 `;
+
 const ResumeLink = styled.a`
   ${tw`border-solid border-2px border-white text-white bg-transparent py-2 px-3
   text-lg font-thin cursor-pointer w-100% my-2 no-underline
@@ -38,7 +43,7 @@ const ResumeLink = styled.a`
   }
 `;
 
-const Bio = ({ bioText }) => {
+const Bio = ({ professionalBio, personalBio }) => {
   return (
     <Fade bottom delay={50} distance="25px">
       <BioWrapper>
@@ -50,7 +55,8 @@ const Bio = ({ bioText }) => {
           <Fade right delay={50} distance="25px">
             <Underline />
           </Fade>
-          <BioBody>{bioText}</BioBody>
+          <BioBody>{professionalBio}</BioBody>
+          <BioBody>{personalBio}</BioBody>
         </div>
         <div>
           <ResumeLink
@@ -71,6 +77,11 @@ const Bio = ({ bioText }) => {
       </BioWrapper>
     </Fade>
   );
+};
+
+Bio.propTypes = {
+  professionalBio: PropTypes.string.isRequired,
+  personalBio: PropTypes.string.isRequired
 };
 
 export default Bio;
