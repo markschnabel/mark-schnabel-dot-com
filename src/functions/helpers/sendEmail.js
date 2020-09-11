@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
@@ -11,21 +11,21 @@ const transporter = nodemailer.createTransport({
     clientSecret: process.env.GMAIL_OAUTH_CLIENT_SECRET,
     refreshToken: process.env.GMAIL_OAUTH_REFRESH_TOKEN,
     accessToken: process.env.GMAIL_OAUTH_ACCESS_TOKEN,
-    expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10),
-  },
-})
+    expires: Number.parseInt(process.env.GMAIL_OAUTH_TOKEN_EXPIRE, 10)
+  }
+});
 
 function sendEmail(mailOptions) {
   return new Promise((resolve, reject) => {
     transporter.sendMail(mailOptions, error => {
       if (error) {
-        console.error(error.stack || error)
+        console.error(error.stack || error);
 
-        reject(error)
+        reject(error);
       }
-      resolve()
-    })
-  })
+      resolve();
+    });
+  });
 }
 
-export default sendEmail
+export default sendEmail;

@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react'
-import styled from '@emotion/styled'
-import Fade from 'react-reveal/Fade'
+import React, { Fragment } from 'react';
+import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 const Header = styled.h1`
   ${tw`text-3xl sm:text-4xl md:text-6xl font-semibold uppercase my-1 tracking-wide
@@ -13,11 +13,11 @@ const Header = styled.h1`
       }
     }
   }
-`
+`;
 const Divider = styled.div`
   ${tw`bg-white opacity-50 w-100% mt-4 lg:mt-6 mb-8 lg:mb-20`};
   height: 1px;
-`
+`;
 
 const SectionHeader = ({ headerText }) => {
   return (
@@ -31,7 +31,7 @@ const SectionHeader = ({ headerText }) => {
         <Divider />
       </Fade>
     </Fragment>
-  )
-}
+  );
+};
 
-export default SectionHeader
+export default SectionHeader;

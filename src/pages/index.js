@@ -1,11 +1,11 @@
-import React from 'react'
-import { Element } from 'react-scroll'
+import React from 'react';
+import { Element } from 'react-scroll';
 
-import Layout from '../components/layout/Layout'
-import Landing from '../components/landing/Landing'
-import Portfolio from '../components/portfolio/Portfolio'
-import About from '../components/about/About'
-import Contact from '../components/contact/Contact'
+import Layout from '../components/layout/Layout';
+import Landing from '../components/landing/Landing';
+import Portfolio from '../components/portfolio/Portfolio';
+import About from '../components/about/About';
+import Contact from '../components/contact/Contact';
 
 const IndexPage = () => (
   <Layout>
@@ -20,6 +20,6 @@ const IndexPage = () => (
       <Contact />
     </Element>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

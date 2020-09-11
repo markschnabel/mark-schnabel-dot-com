@@ -1,8 +1,8 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from '@emotion/styled'
-import Fade from 'react-reveal/Fade'
+import React from 'react';
+import Img from 'gatsby-image';
+import { StaticQuery, graphql } from 'gatsby';
+import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 const ImageContainer = styled.div`
   position: relative;
@@ -19,7 +19,7 @@ const ImageContainer = styled.div`
     max-width: 400px;
     max-height: 350px;
   }
-`
+`;
 
 const ProfilePicture = () => {
   return (
@@ -49,10 +49,10 @@ const ProfilePicture = () => {
               </Fade>
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default ProfilePicture
+export default ProfilePicture;

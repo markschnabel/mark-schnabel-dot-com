@@ -1,9 +1,9 @@
-import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import SectionHeader from '../shared/SectionHeader'
-import ContactLinks from './ContactLinks'
-import ContactForm from './ContactForm'
+import SectionHeader from '../shared/SectionHeader';
+import ContactLinks from './ContactLinks';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
@@ -20,7 +20,7 @@ const Contact = () => {
         </Row>
       </Grid>
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

@@ -1,39 +1,39 @@
-import React, { Component } from 'react'
-import styled from '@emotion/styled'
-import Fade from 'react-reveal/Fade'
-import axios from 'axios'
-import validator from 'validator'
-import Spinner from 'react-svg-spinner'
-import _ from 'lodash'
+import React, { Component } from 'react';
+import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
+import axios from 'axios';
+import validator from 'validator';
+import Spinner from 'react-svg-spinner';
+import _ from 'lodash';
 
-import isEmpty from '../../utils/isEmpty'
+import isEmpty from '../../utils/isEmpty';
 
 const SpinnerContainer = styled.div`
   ${tw`flex flex-col items-center justify-center`};
   height: 600px;
-`
+`;
 const StyledInput = styled.input`
   ${tw`bg-background rounded h-12 font-secondary border-1 tracking-wide border-grey-dark border-solid font-light
   px-2 text-lg outline-none py-2 mb-3 hover:border-accent focus:border-primary`};
   transition: all 0.5s ease;
   width: 100%;
-`
+`;
 const InlineInputsSection = styled.div`
   ${tw`lg:flex lg:justify-between`};
-`
+`;
 const InlineInputContainer = styled.div`
   ${tw`block`};
   @media screen and (min-width: 992px) {
     width: 47.5%;
   }
-`
+`;
 const StyledLabel = styled.label`
   ${tw`block text-lg mb-2`};
-`
+`;
 const Required = styled.span`
   ${tw`text-accent`};
-`
-const RequiredAsterix = () => <Required>*</Required>
+`;
+const RequiredAsterix = () => <Required>*</Required>;
 
 const StyledTextArea = styled.textarea`
   ${tw`bg-background w-100% rounded font-secondary tracking-wide border-2 border-grey-dark border-solid font-light
@@ -41,17 +41,17 @@ const StyledTextArea = styled.textarea`
   transition: border 0.5s ease;
   min-height: 150px;
   resize: vertical;
-`
+`;
 const SubmitButton = styled.button`
   ${tw`border-solid border-2px border-white text-white bg-transparent py-4 
   text-lg font-semibold cursor-pointer w-100% my-6 uppercase
   hover:bg-white hover:text-black inline mr-5%`};
   transition: all 0.3s ease;
-`
+`;
 const HelperText = styled.p`
   ${tw`italic mb-4 text-sm`};
   ${props => (props.error ? tw`text-error` : tw`text-grey`)};
-`
+`;
 const Message = styled.p`
   ${tw`p-4 w-100% mb-3 border-solid border-2 font-semibold text-center text-base`};
   border-radius: 5px;
@@ -61,13 +61,13 @@ const Message = styled.p`
       : null};
   ${props =>
     props.error ? tw`text-error bg-error-light border-error-dark` : null};
-`
+`;
 
-const LAMBDA_URI = '/.netlify/functions/contact_message'
+const LAMBDA_URI = '/.netlify/functions/contact_message';
 
 export class ContactForm extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       firstName: '',
@@ -79,21 +79,21 @@ export class ContactForm extends Component {
 
       errors: {},
       success: null,
-      loading: false,
-    }
+      loading: false
+    };
 
-    this.handleChange = this.handleChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.setErrors = _.debounce(this.setErrors.bind(this), 700)
-    this.setSuccess = _.debounce(this.setSuccess.bind(this), 700)
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.setErrors = _.debounce(this.setErrors.bind(this), 700);
+    this.setSuccess = _.debounce(this.setSuccess.bind(this), 700);
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   setErrors(errors) {
-    this.setState({ errors, loading: false, success: null })
+    this.setState({ errors, loading: false, success: null });
   }
 
   setSuccess(success) {
@@ -106,33 +106,33 @@ export class ContactForm extends Component {
       phone: '',
       subject: '',
       email: '',
-      message: '',
-    })
+      message: ''
+    });
   }
 
   async handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    await this.setState({ loading: true })
+    await this.setState({ loading: true });
 
-    const errors = {}
-    const { firstName, lastName, email, phone, subject, message } = this.state
+    const errors = {};
+    const { firstName, lastName, email, phone, subject, message } = this.state;
 
     if (!validator.isLength(subject, { min: 5, max: 100 })) {
-      errors.subject = 'Must be between 5-100 characters.'
+      errors.subject = 'Must be between 5-100 characters.';
     }
     if (!validator.isLength(message, { min: 10, max: 1000 })) {
-      errors.message = 'Must be between 10-1000 characters.'
+      errors.message = 'Must be between 10-1000 characters.';
     }
     if (!validator.isEmail(email)) {
-      errors.email = 'Must be a valid email address.'
+      errors.email = 'Must be a valid email address.';
     }
 
     this.setErrors(errors, () => {
       if (!isEmpty(errors)) {
-        return
+        return;
       }
-    })
+    });
 
     axios
       .post(LAMBDA_URI, {
@@ -141,23 +141,23 @@ export class ContactForm extends Component {
         email,
         phone,
         subject,
-        message,
+        message
       })
       .then(res => {
-        console.log(res)
-        this.setSuccess(res.data.success)
+        console.log(res);
+        this.setSuccess(res.data.success);
       })
       .catch(err => {
         if (typeof err.response.data.errors === 'object') {
-          this.setErrors(err.response.data.errors)
+          this.setErrors(err.response.data.errors);
         } else {
           this.setErrors({
             general: `I'm sorry. It seems that an unknown error has occured. Please 
                 try again shortly or feel free to use one of the designated methods 
-                next to this form to contact me! Thank you for your patience`,
-          })
+                next to this form to contact me! Thank you for your patience`
+          });
         }
-      })
+      });
   }
 
   render() {
@@ -166,18 +166,18 @@ export class ContactForm extends Component {
         <SpinnerContainer>
           <Spinner color="white" size="30%" />
         </SpinnerContainer>
-      )
+      );
     }
 
-    let successOrErrorMessage
-    const { errors, success } = this.state
+    let successOrErrorMessage;
+    const { errors, success } = this.state;
 
     if (!isEmpty(success) && isEmpty(errors)) {
-      successOrErrorMessage = <Message success>{success}</Message>
+      successOrErrorMessage = <Message success>{success}</Message>;
     } else if (!isEmpty(errors.general) && isEmpty(success)) {
-      successOrErrorMessage = <Message error>{errors.general}</Message>
+      successOrErrorMessage = <Message error>{errors.general}</Message>;
     } else {
-      successOrErrorMessage = ''
+      successOrErrorMessage = '';
     }
 
     return (
@@ -272,8 +272,8 @@ export class ContactForm extends Component {
           <SubmitButton type="submit">send</SubmitButton>
         </form>
       </Fade>
-    )
+    );
   }
 }
 
-export default ContactForm
+export default ContactForm;

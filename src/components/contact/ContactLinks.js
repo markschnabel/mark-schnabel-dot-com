@@ -1,17 +1,17 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa'
-import Fade from 'react-reveal/Fade'
+import React from 'react';
+import styled from '@emotion/styled';
+import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa';
+import Fade from 'react-reveal/Fade';
 
-import { colors as twColors } from '../../../tailwind'
+import { colors as twColors } from '../../../tailwind';
 
 const ContactLinksContainer = styled.div`
   ${tw`my-4 lg:my-0 mx-auto h-100% text-center flex flex-col justify-center items-center`};
   max-height: 576px;
-`
+`;
 const Section = styled.div`
   ${tw`my-2`};
-`
+`;
 const StyledIconLink = styled.a`
   ${tw`text-2xl lg:text-3xl mx-5`};
   transition: all 0.5s ease;
@@ -24,14 +24,14 @@ const StyledIconLink = styled.a`
 
   &:hover {
     svg {
-      fill: ${twColors['accent']};
+      fill: ${twColors.accent};
     }
   }
-`
+`;
 const StyledTextLink = styled.a`
   ${tw`block text-lg lg:text-xl underline font-light italic cursor-pointer hover:text-accent pb-4`};
   transition: all 0.5s ease;
-`
+`;
 
 const ResumeLink = styled.a`
   ${tw` border-2px border-solid border-white text-white bg-transparent 
@@ -40,7 +40,7 @@ const ResumeLink = styled.a`
   width: 250px !important;
   display: block !important;
   transition: all 0.3s ease;
-`
+`;
 
 const ContactLinks = () => {
   return (
@@ -90,7 +90,7 @@ const ContactLinks = () => {
           </ResumeLink>
         </Section>
         <Section>
-        <ResumeLink
+          <ResumeLink
             href="https://drive.google.com/file/d/18xEFbp0lZS1_p963fXMMhPj7w80bIS1X/view"
             target="_blank"
             rel="noopener noreferrer"
@@ -100,7 +100,7 @@ const ContactLinks = () => {
         </Section>
       </Fade>
     </ContactLinksContainer>
-  )
-}
+  );
+};
 
-export default ContactLinks
+export default ContactLinks;
