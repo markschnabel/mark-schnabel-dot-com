@@ -61,7 +61,7 @@ const Header = () => {
         </LandingHeader>
         <LandingSubHeader>
           <Fade bottom cascade delay={950} distance="100px">
-            Software Developer
+            Software Engineer
           </Fade>
         </LandingSubHeader>
       </Wrapper>
