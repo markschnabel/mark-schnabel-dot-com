@@ -5,9 +5,9 @@ module.exports = {
 
   extends: 'react-app',
 
-	globals: {
-		tw: true
-	},
+  globals: {
+    tw: true
+  },
 
   rules: {
     indent: ['error', 2],
