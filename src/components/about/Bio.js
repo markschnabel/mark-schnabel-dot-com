@@ -20,7 +20,7 @@ const Underline = styled.div`
   height: 1px;
 `;
 const BioBody = styled.p`
-  ${tw`text-base font-secondary my-1 font-hairline text-grey-light tracking-wide pt-2 lg:mt-0 mb-12 lg:mb-4`};
+  ${tw`text-base font-secondary my-1 font-light text-grey-light tracking-wide pt-2 lg:mt-0 mb-12 lg:mb-4`};
   font-size: 16px;
 
   @media only screen and (max-width: 576px) {

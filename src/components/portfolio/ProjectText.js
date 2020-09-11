@@ -41,7 +41,7 @@ const TextSectionTitle = styled.h6`
 `;
 
 const TextSectionBody = styled.p`
-  ${tw`text-base my-1 font-hairline text-grey-light tracking-wide`};
+  ${tw`text-base my-1 font-light text-grey-light tracking-wide`};
 `;
 
 const LinksWrapper = styled.div`

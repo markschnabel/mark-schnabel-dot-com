@@ -33,7 +33,7 @@ const LandingSubHeader = styled.h2`
   & {
     .react-reveal {
       span {
-        ${tw`font-secondary text-grey-light font-hairline`};
+        ${tw`font-secondary text-grey-light font-thin`};
       }
     }
   }
