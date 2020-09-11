@@ -23,6 +23,9 @@ module.exports = {
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -49,8 +52,14 @@ module.exports = {
         name: 'markdown'
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/`,
+        name: 'content'
+      }
+    },
+
     {
       resolve: 'gatsby-transformer-remark',
       options: {

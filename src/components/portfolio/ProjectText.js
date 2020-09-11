@@ -18,13 +18,16 @@ const TextWrapper = styled.div`
     padding: ${props => (props.reverse ? '5px 9.5% 0 0' : '5px 0 0 9.5%')};
   }
 `;
+
 const ProjectTitle = styled.h3`
   ${tw`text-xl lg:text-2xl m-0 tracking-wide font-semibold`};
 `;
+
 const Divider = styled.div`
   ${tw`bg-white opacity-50 w-100% mt-2 lg:hidden`};
   height: 1px;
 `;
+
 const ProjectNumber = styled.h3`
   ${tw`absolute text-background font-bold m-0 -mt-32 hidden xxl:block`};
   font-size: 12vw;
@@ -32,15 +35,19 @@ const ProjectNumber = styled.h3`
   text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
   margin-left: ${props => (props.reverse ? '-13rem' : '26rem')};
 `;
+
 const TextSectionTitle = styled.h6`
   ${tw`text-base font-semibold lg:text-lg m-0 uppercase tracking-extra-wide pt-3`};
 `;
+
 const TextSectionBody = styled.p`
   ${tw`text-base my-1 font-hairline text-grey-light tracking-wide`};
 `;
+
 const LinksWrapper = styled.div`
   ${tw`mt-5 pb-5 lg:h-100% lg:flex-flex-col lg:justify-end`};
 `;
+
 const Link = styled.a`
   ${tw`mr-5% cursor-pointer no-underline `};
   & {
@@ -63,6 +70,10 @@ const LinkText = styled.span`
   ${tw`text-lg mr-2`};
   transition: color 0.5s ease;
 `;
+
+function formatTechStack(techStack) {
+  return techStack.join(', ');
+}
 
 const ProjectText = ({
   title,
@@ -97,10 +108,10 @@ const ProjectText = ({
             <TextSectionTitle>Description</TextSectionTitle>
             <TextSectionBody>{description}</TextSectionBody>
             <TextSectionTitle>Tech Stack</TextSectionTitle>
-            <TextSectionBody>{techStack}</TextSectionBody>
+            <TextSectionBody>{formatTechStack(techStack)}</TextSectionBody>
           </div>
           <LinksWrapper>
-            {projectLink.length >= 1 ? (
+            {projectLink && projectLink.length ? (
               <Link
                 href={projectLink}
                 target="_blank"

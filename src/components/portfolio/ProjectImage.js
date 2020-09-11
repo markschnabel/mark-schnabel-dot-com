@@ -35,10 +35,10 @@ const HoverText = styled.p`
 `;
 
 const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
-  // Since the project may not be hosted anywhere this should default to use the
-  // repository link
-  const link = projectLink.length >= 1 ? projectLink : repoLink;
-  const hoverText = projectLink.length >= 1 ? 'Visit Project' : 'View Source';
+  const hasProjectLink = projectLink && projectLink.length;
+
+  const link = hasProjectLink ? projectLink : repoLink;
+  const hoverText = hasProjectLink ? 'Visit Project' : 'View Source';
 
   return (
     <Col lg={6} style={{ padding: 0 }}>
