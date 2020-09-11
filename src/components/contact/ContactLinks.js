@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
 
 import { colors as twColors } from '../../../tailwind';
@@ -34,7 +34,7 @@ const StyledTextLink = styled.a`
 `;
 
 const ResumeLink = styled.a`
-  ${tw` border-2px border-solid border-white text-white bg-transparent 
+  ${tw`border-2px border-solid border-white text-white bg-transparent
   py-2 text-lg font-thin cursor-pointer my-2 uppercase no-underline
   hover:bg-white hover:text-black inline mr-5%`};
   width: 250px !important;
@@ -61,13 +61,6 @@ const ContactLinks = () => {
               rel="noopener noreferrer"
             >
               <FaLinkedin />
-            </StyledIconLink>
-            <StyledIconLink
-              href="https://bitbucket.org/markschnabel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaBitbucket />
             </StyledIconLink>
           </Section>
         </div>

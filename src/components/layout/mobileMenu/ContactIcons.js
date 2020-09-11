@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaBitbucket, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import styled from '@emotion/styled';
 
 import { colors as twColors } from '../../../../tailwind';
@@ -34,13 +34,6 @@ const ContactIcons = () => {
         rel="noopener noreferrer"
       >
         <FaLinkedin />
-      </StyledIconLink>
-      <StyledIconLink
-        href="https://bitbucket.org/markschnabel/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaBitbucket />
       </StyledIconLink>
     </ContactIconsWrapper>
   );

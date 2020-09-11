@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { css } from 'emotion';
 import styled from '@emotion/styled';
 
@@ -32,13 +32,6 @@ const ContactIcons = () => {
         rel="noopener noreferrer"
       >
         <FaLinkedin className={IconLinkStyle} />
-      </a>
-      <a
-        href="https://bitbucket.org/markschnabel/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaBitbucket className={IconLinkStyle} />
       </a>
     </IconLinksWrapper>
   );
