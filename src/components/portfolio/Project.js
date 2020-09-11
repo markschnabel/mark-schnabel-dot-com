@@ -5,16 +5,23 @@ import { Row } from 'react-flexbox-grid';
 import ProjectText from './ProjectText';
 import ProjectImage from './ProjectImage';
 
-const Project = ({
-  image,
-  title,
-  description,
-  techStack,
-  projectNumber,
-  projectLink,
-  repoLink,
-  reverse
-}) => {
+function formatProjectNumber(projectNumber) {
+  return projectNumber < 10 ? `0${projectNumber}.` : `${projectNumber}.`;
+}
+
+const Project = (props) => {
+  const {
+    image,
+    title,
+    description,
+    techStack,
+    projectNumber,
+    projectLink,
+    repoLink
+  } = props;
+
+  // Flip the styling if were on an even numbered project
+  const reverse = (projectNumber % 2) === 0;
   const flexDirection = reverse ? 'row-reverse' : 'row';
 
   return (
@@ -29,7 +36,7 @@ const Project = ({
         title={title}
         description={description}
         techStack={techStack}
-        projectNumber={projectNumber}
+        projectNumber={formatProjectNumber(projectNumber)}
         projectLink={projectLink}
         repoLink={repoLink}
         reverse={reverse}
@@ -42,10 +49,9 @@ Project.propTypes = {
   image: PropTypes.object.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  projectNumber: PropTypes.string.isRequired,
+  projectNumber: PropTypes.number.isRequired,
   projectLink: PropTypes.string,
-  repoLink: PropTypes.string.isRequired,
-  reverse: PropTypes.bool.isRequired
+  repoLink: PropTypes.string.isRequired
 };
 
 export default Project;

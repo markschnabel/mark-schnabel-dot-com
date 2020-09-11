@@ -1,0 +1,48 @@
+[
+  {
+    "title": "ColorPal",
+    "description": "A SPA/REST based web application built for designers. It utilizes OpenCV & KMeans clustering to allow users to obtain the core color palettes of images they submit via direct upload or an external link. Also reaches out to the colormind.io API to provide a ML enhanced palette based on the palette of the photo they submitted.",
+    "techStack": [
+      "Python",
+      "Flask",
+      "OpenCV",
+      "SkLearn",
+      "Numpy",
+      "JavaScript",
+      "React",
+      "Styled Components",
+      "Axios",
+      "Netlify",
+      "Heroku"
+    ],
+    "projectLink": "https://colorpal.netlify.com/",
+    "repoLink": "https://github.com/markschnabel/colorpal-client",
+    "image": "../src/images/projects/ColorPal.png"
+  },
+  {
+    "title": "OpenCV Motion Detector",
+    "description": "A Python and OpenCV program that utilizes background subtraction to work as a home-made motion detector. Can work with live-streamed video or pre-recorded video files.",
+    "techStack": ["Python", "OpenCV"],
+    "repoLink": "https://github.com/markschnabel/opencv-motion-detector",
+    "image": "../src/images/projects/MotionDetector.jpg"
+  },
+  {
+    "title": "Portfolio",
+    "description": "The webiste you're on right now! I built this website to showcase my current and upcoming projects. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and auto generate components from markdown, and Netlify serverless lambda functions to serve emails from my contact form.",
+    "techStack": [
+      "JavaScript",
+      "React",
+      "Gatsby",
+      "GraphQL",
+      "Markdown",
+      "Tailwind",
+      "CSS",
+      "Emotion JS",
+      "Netlify",
+      "Nodemailer",
+      "Netlify AWS Lambda Functions"
+    ],
+    "repoLink": "https://github.com/markschnabel/mark-schnabel-dot-com",
+    "image": "../src/images/projects/Portfolio.png"
+  }
+]

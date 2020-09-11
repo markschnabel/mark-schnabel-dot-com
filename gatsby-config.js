@@ -23,6 +23,10 @@ module.exports = {
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-transformer-json',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -45,33 +49,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/markdown/`,
-        name: 'markdown'
+        path: `${__dirname}/content/`,
+        name: 'content'
       }
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-              plugins: [
-                {
-                  resolve: 'gatsby-remark-copy-linked-files',
-                  options: {
-                    destinationDir: '/images/projects',
-                    ignoreFileExtensions: []
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    'gatsby-plugin-offline'
+    }
   ]
 };

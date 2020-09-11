@@ -10,25 +10,19 @@ const Portfolio = () => {
     <StaticQuery
       query={graphql`
         query projectDataQuery {
-          allMarkdownRemark(
-            sort: { fields: frontmatter___projectNumber },
-            filter: {fileAbsolutePath: {regex: "/(projects)\/.*\\.md$/"}}
-            ) {
+          allPortfolioProjectsJson {
             edges {
               node {
                 id
-                frontmatter {
-                  title
-                  projectNumber
-                  description
-                  techStack
-                  projectLink
-                  repoLink
-                  image {
-                    childImageSharp {
-                      fluid(maxWidth: 600, maxHeight: 400) {
-                        ...GatsbyImageSharpFluid
-                      }
+                title
+                description
+                techStack
+                projectLink
+                repoLink
+                image {
+                  childImageSharp {
+                    fluid(maxWidth: 600, maxHeight: 400) {
+                      ...GatsbyImageSharpFluid
                     }
                   }
                 }
@@ -37,8 +31,11 @@ const Portfolio = () => {
           }
         }
       `}
+
       render={data => {
-        const projectDataArr = data.allMarkdownRemark.edges;
+        const projectDataArr = data.allPortfolioProjectsJson.edges;
+
+        let projectNumber = 1;
 
         const projectsArr = projectDataArr.map(data => {
           const {
@@ -47,19 +44,14 @@ const Portfolio = () => {
             image,
             techStack,
             projectLink,
-            projectNumber,
             repoLink
-          } = data.node.frontmatter;
-          return (
+          } = data.node;
+
+          const jsx = (
             <Project
               key={'project-' + data.node.id}
               title={title}
-              projectNumber={
-                projectNumber < 10
-                  ? '0' + projectNumber.toString()
-                  : projectNumber.toString()
-              }
-              reverse={(projectNumber % 2) === 0}
+              projectNumber={projectNumber}
               description={description}
               projectLink={projectLink}
               repoLink={repoLink}
@@ -67,6 +59,10 @@ const Portfolio = () => {
               image={image}
             />
           );
+
+          projectNumber += 1;
+
+          return jsx;
         });
 
         return (
