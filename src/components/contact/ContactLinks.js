@@ -71,7 +71,6 @@ const ContactLinks = () => {
           >
             mark.schnabel@markschnabel.com
           </StyledTextLink>
-          <StyledTextLink href="tel:+">603-315-2828</StyledTextLink>
         </Section>
         <Section>
           <ResumeLink

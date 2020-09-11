@@ -15,7 +15,6 @@ const ContactInfo = () => {
       <InfoLink href="mailto:mark.schnabel@markschnabel.com" target="_top">
           mark.schnabel@markschnabel.com
       </InfoLink>
-      <InfoLink href="tel:+6033152828">603-315-2828</InfoLink>
     </ContactInfoWrapper>
   );
 };
