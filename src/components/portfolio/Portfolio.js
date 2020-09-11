@@ -59,7 +59,7 @@ const Portfolio = () => {
                   ? '0' + projectNumber.toString()
                   : projectNumber.toString()
               }
-              reverse={projectNumber % 2 == 0 ? true : false}
+              reverse={(projectNumber % 2) === 0}
               description={description}
               projectLink={projectLink}
               repoLink={repoLink}

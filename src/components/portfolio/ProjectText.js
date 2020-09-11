@@ -80,8 +80,8 @@ const ProjectText = ({
       <Fade
         delay={50}
         distance="50px"
-        left={reverse ? true : false}
-        right={reverse ? false : true}
+        left={!!reverse}
+        right={!reverse}
       >
         <TextWrapper reverse={reverse}>
           <div>

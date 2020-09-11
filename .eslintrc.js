@@ -13,6 +13,7 @@ module.exports = {
     indent: ['error', 2],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
+    eqeqeq: ['error', 'always'],
     'max-len': ['error', { code: 120 }],
     'linebreak-style': ['error', 'unix'],
     'object-curly-spacing': ['error', 'always'],
@@ -25,6 +26,9 @@ module.exports = {
     'no-multi-spaces': ['error'],
     'array-element-newline': ['error', 'consistent'],
     'array-bracket-newline': ['error', { multiline: true }],
+    'no-trailing-spaces': ['error'],
+    'no-unneeded-ternary': ['error', { 'defaultAssignment': false }],
+    'prefer-const': ['error'],
     'space-before-function-paren': [
       'error',
       {

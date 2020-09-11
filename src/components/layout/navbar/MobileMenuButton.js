@@ -2,10 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
+const Line = styled.div`
+  ${tw`bg-grey-light block mt-1`};
+  width: 28px;
+  height: 2px;
+  transition: all 0.2s ease-in-out;
+`;
+
 const StyledButton = styled.button`
-  ${tw`flex flex-col items-center outline-none bg-transparent border-none 
-       cursor-pointer
-       lg:hidden`};
+  ${tw`flex flex-col items-center outline-none bg-transparent border-none cursor-pointer lg:hidden`};
 
   /* Hover styles for lines that make up the menu button.
      Done here to make use of the "nth-child" selectors. */
@@ -46,12 +51,6 @@ const StyledButton = styled.button`
       }
     }
   }
-`;
-const Line = styled.div`
-  ${tw`bg-grey-light block mt-1`};
-  width: 28px;
-  height: 2px;
-  transition: all 0.2s ease-in-out;
 `;
 
 const MobileMenuButton = ({ toggleMobileMenu, mobileMenuIsOpen }) => {

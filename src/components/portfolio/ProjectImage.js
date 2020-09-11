@@ -45,8 +45,8 @@ const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
       <Fade
         delay={50}
         distance="50px"
-        left={reverse ? false : true}
-        right={reverse ? true : false}
+        left={!reverse}
+        right={!!reverse}
       >
         <ImageContainer>
           <a href={link} target="_blank" rel="noopener noreferrer">

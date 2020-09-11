@@ -42,9 +42,9 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-let colors = {
+const colors = {
   transparent: 'transparent',
-  
+
   background: '#0C0C0C',
   'focus-background': '#1C1C1C',
 

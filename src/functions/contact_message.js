@@ -51,7 +51,7 @@ exports.handler = function(event, _, callback) {
       <strong>Last Name:</strong> ${requestBody.lastName}<br/>
       <strong>Phone Number:</strong> ${requestBody.phoneNumber}<br/>
       <strong>Email:</strong> ${requestBody.email}<br/>
-      <strong>Message:</strong> ${requestBody.message} 
+      <strong>Message:</strong> ${requestBody.message}
     `
   };
 
@@ -63,7 +63,7 @@ exports.handler = function(event, _, callback) {
           'Success! Your message has been sent. I\'ll review it and get back to you as soon as possible! Thank you.'
       });
     })
-    .catch(_err => {
+    .catch(() => {
       send(400, {
         errors: {
           general: `Sorry! It seems something has gone wrong while processing your message.
