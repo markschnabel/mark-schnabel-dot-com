@@ -1,44 +1,44 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import { throttle } from 'lodash'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import { throttle } from 'lodash';
 
 // Import typefaces here to make them available globally
-import 'typeface-lato'
-import 'typeface-inter'
+import 'typeface-lato';
+import 'typeface-inter';
 
 // Local imports
-import './layout.css'
-import { screens as twScreens } from '../../../tailwind'
-import Container from '../shared/Container'
-import Navbar from './navbar/Navbar'
-import MobileMenu from './mobileMenu/MobileMenu'
-import Footer from './Footer'
+import './layout.css';
+import { screens as twScreens } from '../../../tailwind';
+import Container from '../shared/Container';
+import Navbar from './navbar/Navbar';
+import MobileMenu from './mobileMenu/MobileMenu';
+import Footer from './Footer';
 
 class Layout extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       mobileMenuIsOpen: false,
-      navShouldBeTransparent: true,
-    }
+      navShouldBeTransparent: true
+    };
 
-    this.toggleMobileMenu = this.toggleMobileMenu.bind(this)
-    this.handleResize = this.handleResize.bind(this)
-    this.handleScroll = throttle(this.handleScroll.bind(this), 300)
-    this.closeMobileMenu = this.closeMobileMenu.bind(this)
+    this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.handleScroll = throttle(this.handleScroll.bind(this), 300);
+    this.closeMobileMenu = this.closeMobileMenu.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener('resize', this.handleResize)
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('resize', this.handleResize);
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.handleResize)
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   /**
@@ -49,7 +49,7 @@ class Layout extends Component {
    */
   handleResize() {
     if (window.innerWidth >= parseInt(twScreens.lg.replace('px', ''))) {
-      this.setState({ mobileMenuIsOpen: false })
+      this.setState({ mobileMenuIsOpen: false });
     }
   }
 
@@ -61,9 +61,9 @@ class Layout extends Component {
    */
   handleScroll() {
     if (window.scrollY > 10) {
-      this.setState({ navShouldBeTransparent: false })
+      this.setState({ navShouldBeTransparent: false });
     } else {
-      this.setState({ navShouldBeTransparent: true })
+      this.setState({ navShouldBeTransparent: true });
     }
   }
 
@@ -72,15 +72,15 @@ class Layout extends Component {
    */
   toggleMobileMenu() {
     this.setState(prevState => ({
-      mobileMenuIsOpen: !prevState.mobileMenuIsOpen,
-    }))
+      mobileMenuIsOpen: !prevState.mobileMenuIsOpen
+    }));
   }
 
   /**
    * Function used to close the mobile menu whenever a scroll link is clicked
    */
   closeMobileMenu() {
-    this.setState({ mobileMenuIsOpen: false })
+    this.setState({ mobileMenuIsOpen: false });
   }
 
   render() {
@@ -104,12 +104,12 @@ class Layout extends Component {
               meta={[
                 {
                   name: 'description',
-                  content: data.site.siteMetadata.description,
+                  content: data.site.siteMetadata.description
                 },
                 {
                   name: 'keywords',
-                  content: data.site.siteMetadata.keywords,
-                },
+                  content: data.site.siteMetadata.keywords
+                }
               ]}
             >
               <html lang="en" />
@@ -131,12 +131,12 @@ class Layout extends Component {
           </>
         )}
       />
-    )
+    );
   }
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default Layout
+export default Layout;

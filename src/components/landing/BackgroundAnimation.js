@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React from 'react';
+import styled from '@emotion/styled';
 
 const Wrapper = styled.div`
   ${tw`absolute w-100% h-100% flex justify-center items-center`};
   background-color: transparent;
-`
+`;
 const Circle = styled.div`
   ${tw`absolute rounded-circle opacity-50`};
   height: 75vw;
@@ -37,7 +37,7 @@ const Circle = styled.div`
   animation-duration: ${props => props.duration};
   animation-delay: ${props => props.delay};
   animation-fill-mode: both;
-`
+`;
 
 const BackgroundCircle = () => {
   return (
@@ -47,7 +47,7 @@ const BackgroundCircle = () => {
       <Circle duration="32s" direction="reverse" />
       <Circle duration="32s" />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default BackgroundCircle
+export default BackgroundCircle;

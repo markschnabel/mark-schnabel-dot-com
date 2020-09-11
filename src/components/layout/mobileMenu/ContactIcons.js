@@ -1,22 +1,22 @@
-import React from 'react'
-import { FaGithub, FaBitbucket, FaLinkedin } from 'react-icons/fa'
-import styled from '@emotion/styled'
+import React from 'react';
+import { FaGithub, FaBitbucket, FaLinkedin } from 'react-icons/fa';
+import styled from '@emotion/styled';
 
-import { colors as twColors } from '../../../../tailwind'
+import { colors as twColors } from '../../../../tailwind';
 
 const ContactIconsWrapper = styled.div`
   ${tw`inline-block w-100% text-center mt-16`};
-`
+`;
 
 const StyledIconLink = styled.a`
   ${tw`text-xl cursor-pointer mx-4`};
   &:hover {
     svg {
-      fill: ${twColors['accent']};
+      fill: ${twColors.accent};
     }
   }
   transition: all 0.5s ease;
-`
+`;
 
 const ContactIcons = () => {
   return (
@@ -43,7 +43,7 @@ const ContactIcons = () => {
         <FaBitbucket />
       </StyledIconLink>
     </ContactIconsWrapper>
-  )
-}
+  );
+};
 
-export default ContactIcons
+export default ContactIcons;

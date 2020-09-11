@@ -1,10 +1,10 @@
-const { createProxyMiddleware } = require('http-proxy-middleware')
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = {
   siteMetadata: {
     title: 'Mark Schnabel - Software Developer',
     description: 'Software development portfolio website for Mark Schnabel.',
-    keywords: 'Software Development, Portfolio, Mark Schnabel',
+    keywords: 'Software Development, Portfolio, Mark Schnabel'
   },
   // for avoiding CORS while developing Netlify Functions locally
   // read more: https://www.gatsbyjs.org/docs/api-proxy/#advanced-proxying
@@ -14,17 +14,17 @@ module.exports = {
       createProxyMiddleware({
         target: 'http://localhost:9000',
         pathRewrite: {
-          '/.netlify/functions/': '',
-        },
+          '/.netlify/functions/': ''
+        }
       })
-    )
+    );
   },
   plugins: [
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'mark-schnabel-dot-com',
         short_name: 'markschnabel.com',
@@ -32,46 +32,46 @@ module.exports = {
         background_color: '#0C0C0C',
         theme_color: '#ff7d2b',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png',
-      },
+        icon: 'src/images/icon.png'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/images/`,
-        name: 'images',
-      },
+        name: 'images'
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/markdown/`,
-        name: 'markdown',
-      },
+        name: 'markdown'
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-transformer-remark`,
+            resolve: 'gatsby-transformer-remark',
             options: {
               plugins: [
                 {
                   resolve: 'gatsby-remark-copy-linked-files',
                   options: {
                     destinationDir: '/images/projects',
-                    ignoreFileExtensions: [],
-                  },
-                },
-              ],
-            },
-          },
-        ],
-      },
+                    ignoreFileExtensions: []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
     },
-    'gatsby-plugin-offline',
-  ],
-}
+    'gatsby-plugin-offline'
+  ]
+};

@@ -1,14 +1,14 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import Fade from 'react-reveal/Fade'
+import React from 'react';
+import styled from '@emotion/styled';
+import Fade from 'react-reveal/Fade';
 
 const FlexContainer = styled.div`
   ${tw`flex flex-col justify-center h-40%`};
-`
+`;
 const Wrapper = styled.div`
   ${tw`absolute md:ml-5% z-5`};
   margin-top: 25vh;
-`
+`;
 const LandingHeader = styled.h1`
   ${tw`md:ml-10% font-semibold uppercase my-1 tracking-wide leading-none`};
   width: 550px;
@@ -27,7 +27,7 @@ const LandingHeader = styled.h1`
   @media (min-width: 1200px) {
     font-size: 5.3rem;
   }
-`
+`;
 const LandingSubHeader = styled.h2`
   ${tw`md:mt-3 md:ml-10% w-100% uppercase tracking-extra-wide leading-none`};
   & {
@@ -44,7 +44,7 @@ const LandingSubHeader = styled.h2`
   @media (min-width: 1200px) {
     font-size: 2.25rem;
   }
-`
+`;
 const Header = () => {
   return (
     <FlexContainer>
@@ -66,7 +66,7 @@ const Header = () => {
         </LandingSubHeader>
       </Wrapper>
     </FlexContainer>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

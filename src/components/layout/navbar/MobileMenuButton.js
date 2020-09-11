@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 const StyledButton = styled.button`
   ${tw`flex flex-col items-center outline-none bg-transparent border-none 
@@ -46,18 +46,18 @@ const StyledButton = styled.button`
       }
     }
   }
-`
+`;
 const Line = styled.div`
   ${tw`bg-grey-light block mt-1`};
   width: 28px;
   height: 2px;
   transition: all 0.2s ease-in-out;
-`
+`;
 
 const MobileMenuButton = ({ toggleMobileMenu, mobileMenuIsOpen }) => {
   const lineClass = mobileMenuIsOpen
     ? 'mobile-menu-line-open'
-    : 'mobile-menu-line-closed'
+    : 'mobile-menu-line-closed';
 
   return (
     <StyledButton onClick={toggleMobileMenu}>
@@ -66,12 +66,12 @@ const MobileMenuButton = ({ toggleMobileMenu, mobileMenuIsOpen }) => {
       <Line className={lineClass} />
       <Line className={lineClass} />
     </StyledButton>
-  )
-}
+  );
+};
 
 MobileMenuButton.propTypes = {
   toggleMobileMenu: PropTypes.func.isRequired,
-  mobileMenuIsOpen: PropTypes.bool.isRequired,
-}
+  mobileMenuIsOpen: PropTypes.bool.isRequired
+};
 
-export default MobileMenuButton
+export default MobileMenuButton;

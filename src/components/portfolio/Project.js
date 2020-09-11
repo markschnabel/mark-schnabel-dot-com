@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Row } from 'react-flexbox-grid'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Row } from 'react-flexbox-grid';
 
-import ProjectText from './ProjectText'
-import ProjectImage from './ProjectImage'
+import ProjectText from './ProjectText';
+import ProjectImage from './ProjectImage';
 
 const Project = ({
   image,
@@ -13,9 +13,9 @@ const Project = ({
   projectNumber,
   projectLink,
   repoLink,
-  reverse,
+  reverse
 }) => {
-  const flexDirection = reverse ? 'row-reverse' : 'row'
+  const flexDirection = reverse ? 'row-reverse' : 'row';
 
   return (
     <Row style={{ flexDirection, paddingBottom: '4rem' }}>
@@ -35,8 +35,8 @@ const Project = ({
         reverse={reverse}
       />
     </Row>
-  )
-}
+  );
+};
 
 Project.propTypes = {
   image: PropTypes.object.isRequired,
@@ -45,7 +45,7 @@ Project.propTypes = {
   projectNumber: PropTypes.string.isRequired,
   projectLink: PropTypes.string,
   repoLink: PropTypes.string.isRequired,
-  reverse: PropTypes.bool.isRequired,
-}
+  reverse: PropTypes.bool.isRequired
+};
 
-export default Project
+export default Project;

@@ -1,9 +1,9 @@
-import React from 'react'
-import { Grid } from 'react-flexbox-grid'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { Grid } from 'react-flexbox-grid';
+import { StaticQuery, graphql } from 'gatsby';
 
-import SectionHeader from '../shared/SectionHeader'
-import Project from './Project'
+import SectionHeader from '../shared/SectionHeader';
+import Project from './Project';
 
 const Portfolio = () => {
   return (
@@ -38,7 +38,7 @@ const Portfolio = () => {
         }
       `}
       render={data => {
-        const projectDataArr = data.allMarkdownRemark.edges
+        const projectDataArr = data.allMarkdownRemark.edges;
 
         const projectsArr = projectDataArr.map(data => {
           const {
@@ -48,8 +48,8 @@ const Portfolio = () => {
             techStack,
             projectLink,
             projectNumber,
-            repoLink,
-          } = data.node.frontmatter
+            repoLink
+          } = data.node.frontmatter;
           return (
             <Project
               key={'project-' + data.node.id}
@@ -66,8 +66,8 @@ const Portfolio = () => {
               techStack={techStack}
               image={image}
             />
-          )
-        })
+          );
+        });
 
         return (
           <>
@@ -76,10 +76,10 @@ const Portfolio = () => {
               <Grid>{projectsArr}</Grid>
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

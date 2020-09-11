@@ -1,12 +1,12 @@
-import React from 'react'
-import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa'
-import { css } from 'emotion'
-import styled from '@emotion/styled'
+import React from 'react';
+import { FaGithub, FaLinkedin, FaBitbucket } from 'react-icons/fa';
+import { css } from 'emotion';
+import styled from '@emotion/styled';
 
 const IconLinksWrapper = styled.div`
   ${tw`absolute flex justify-end w-100%`};
   bottom: 15px;
-`
+`;
 
 const IconLinkStyle = css`
   ${tw`text-lg ml-6 text-grey-light cursor-pointer`};
@@ -14,7 +14,7 @@ const IconLinkStyle = css`
   &:hover {
     fill: #b8572c;
   }
-`
+`;
 
 const ContactIcons = () => {
   return (
@@ -41,7 +41,7 @@ const ContactIcons = () => {
         <FaBitbucket className={IconLinkStyle} />
       </a>
     </IconLinksWrapper>
-  )
-}
+  );
+};
 
-export default ContactIcons
+export default ContactIcons;

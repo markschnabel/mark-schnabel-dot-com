@@ -1,28 +1,28 @@
-import React from 'react'
-import { Grid, Row, Col } from 'react-flexbox-grid'
-import styled from '@emotion/styled'
-import { StaticQuery, graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
+import React from 'react';
+import { Grid, Row, Col } from 'react-flexbox-grid';
+import styled from '@emotion/styled';
+import { StaticQuery, graphql } from 'gatsby';
+import Fade from 'react-reveal/Fade';
 
-import SectionHeader from '../shared/SectionHeader'
-import ProfilePicture from './ProfilePicture'
-import Bio from './Bio'
-import SkillsHeader from './SkillsHeader'
-import Skill from './Skill'
+import SectionHeader from '../shared/SectionHeader';
+import ProfilePicture from './ProfilePicture';
+import Bio from './Bio';
+import SkillsHeader from './SkillsHeader';
+import Skill from './Skill';
 
 const SkillsSectionHeader = styled.h2`
   ${tw`text-xl m-0 text-center tracking-wide font-semibold uppercase mt-20`};
-`
+`;
 const Underline = styled.div`
   ${tw`bg-white w-100% mb-2 m-auto mt-1`};
   max-width: 180px;
   height: 1px;
-`
+`;
 
 function createSkills(skillsString) {
   return skillsString.split(', ').map(skillName => {
-    return <Skill key={'skill-' + skillName} name={skillName} />
-  })
+    return <Skill key={'skill-' + skillName} name={skillName} />;
+  });
 }
 
 const About = () => {
@@ -45,8 +45,8 @@ const About = () => {
           bio,
           programmingLanguages,
           libsAndFrameworks,
-          toolsEnvsDatabases,
-        } = data.markdownRemark.frontmatter
+          toolsEnvsDatabases
+        } = data.markdownRemark.frontmatter;
 
         return (
           <>
@@ -105,10 +105,10 @@ const About = () => {
               </Grid>
             </div>
           </>
-        )
+        );
       }}
     />
-  )
-}
+  );
+};
 
-export default About
+export default About;

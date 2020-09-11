@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
-import PageLinks from './PageLinks'
-import ContactIcons from './ContactIcons'
-import ContactInfo from './ContactInfo'
+import PageLinks from './PageLinks';
+import ContactIcons from './ContactIcons';
+import ContactInfo from './ContactInfo';
 
 const MenuWrapper = styled.div`
   ${tw`fixed pin bg-background lg:hidden w-100% h-100%`};
   opacity: ${props => (props.mobileMenuIsOpen ? '1' : '0')};
   z-index: ${props => (props.mobileMenuIsOpen ? '1' : '0')};
   transition: opacity 0.25s ease;
-`
+`;
 
 const MobileMenu = ({ mobileMenuIsOpen, closeMobileMenu }) => {
   return (
@@ -20,12 +20,12 @@ const MobileMenu = ({ mobileMenuIsOpen, closeMobileMenu }) => {
       <ContactIcons />
       <ContactInfo />
     </MenuWrapper>
-  )
-}
+  );
+};
 
 MobileMenu.propTypes = {
   mobileMenuIsOpen: PropTypes.bool.isRequired,
-  closeMobileMenu: PropTypes.func.isRequired,
-}
+  closeMobileMenu: PropTypes.func.isRequired
+};
 
-export default MobileMenu
+export default MobileMenu;

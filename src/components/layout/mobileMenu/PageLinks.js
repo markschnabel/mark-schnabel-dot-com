@@ -1,15 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styled from '@emotion/styled'
-import { Link as SmoothScrollLink } from 'react-scroll'
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+import { Link as SmoothScrollLink } from 'react-scroll';
 
 const StyledList = styled.ul`
   ${tw`list-reset text-center pt-48 m-auto`};
-`
+`;
 const StyledLink = styled(SmoothScrollLink)`
   ${tw`text-3xl my-32 cursor-pointer font-semibold tracking-extra-wide hover:text-accent`};
   transition: color 0.5s ease;
-`
+`;
 
 const PageLinks = ({ closeMobileMenu }) => {
   return (
@@ -51,11 +51,11 @@ const PageLinks = ({ closeMobileMenu }) => {
         </StyledLink>
       </li>
     </StyledList>
-  )
-}
+  );
+};
 
 PageLinks.propTypes = {
-  closeMobileMenu: PropTypes.func.isRequired,
-}
+  closeMobileMenu: PropTypes.func.isRequired
+};
 
-export default PageLinks
+export default PageLinks;
