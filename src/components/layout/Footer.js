@@ -19,7 +19,7 @@ const Footer = () => {
         <ClosingText>Thank you for visiting!</ClosingText>
       </Fade>
       <Fade right delay={50} distance="50px">
-        <Copyright>Copyright 2019 © Mark Schnabel</Copyright>
+        <Copyright>Copyright {new Date().getFullYear()} © Mark Schnabel</Copyright>
       </Fade>
     </StyledFooter>
   );
