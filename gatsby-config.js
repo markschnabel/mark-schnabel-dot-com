@@ -26,6 +26,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-json',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -48,39 +49,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/markdown/`,
-        name: 'markdown'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: `${__dirname}/content/`,
         name: 'content'
       }
-    },
-
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-transformer-remark',
-            options: {
-              plugins: [
-                {
-                  resolve: 'gatsby-remark-copy-linked-files',
-                  options: {
-                    destinationDir: '/images/projects',
-                    ignoreFileExtensions: []
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
-    },
-    'gatsby-plugin-offline'
+    }
   ]
 };
