@@ -13,14 +13,15 @@ import Skill from './Skill';
 const SkillsSectionHeader = styled.h2`
   ${tw`text-xl m-0 text-center tracking-wide font-semibold uppercase mt-20`};
 `;
+
 const Underline = styled.div`
   ${tw`bg-white w-100% mb-2 m-auto mt-1`};
   max-width: 180px;
   height: 1px;
 `;
 
-function createSkills(skillsString) {
-  return skillsString.split(', ').map(skillName => {
+function formatSkills(skills) {
+  return skills.map(skillName => {
     return <Skill key={'skill-' + skillName} name={skillName} />;
   });
 }
@@ -30,23 +31,22 @@ const About = () => {
     <StaticQuery
       query={graphql`
         query aboutDataQuery {
-          markdownRemark(fileAbsolutePath: { regex: "/about/about.*\\.md$/" }) {
-            frontmatter {
-              bio
-              programmingLanguages
-              libsAndFrameworks
-              toolsEnvsDatabases
-            }
+          aboutJson {
+            bio
+            programmingLanguages
+            libsAndFrameworks
+            toolsEnvsDatabases
           }
         }
       `}
-      render={data => {
+
+      render={({ aboutJson }) => {
         const {
           bio,
           programmingLanguages,
           libsAndFrameworks,
           toolsEnvsDatabases
-        } = data.markdownRemark.frontmatter;
+        } = aboutJson;
 
         return (
           <>
@@ -79,7 +79,7 @@ const About = () => {
                       <SkillsHeader headerText={'Programming Languages'} />
 
                       <div style={{ textAlign: 'center' }}>
-                        {createSkills(programmingLanguages)}
+                        {formatSkills(programmingLanguages)}
                       </div>
                     </Fade>
                   </Col>
@@ -87,7 +87,7 @@ const About = () => {
                     <Fade top delay={50} distance="25px">
                       <SkillsHeader headerText={'Libraries & Frameworks'} />
                       <div style={{ textAlign: 'center' }}>
-                        {createSkills(libsAndFrameworks)}
+                        {formatSkills(libsAndFrameworks)}
                       </div>
                     </Fade>
                   </Col>
@@ -97,7 +97,7 @@ const About = () => {
                         headerText={'Tools, Databases & Environments'}
                       />
                       <div style={{ textAlign: 'center' }}>
-                        {createSkills(toolsEnvsDatabases)}
+                        {formatSkills(toolsEnvsDatabases)}
                       </div>
                     </Fade>
                   </Col>
