@@ -1,0 +1,20 @@
+[
+  {
+    "company": "Minim",
+    "companySite": "https://www.minim.co/",
+    "title": "Software Engineer",
+    "duration": "April 2019 - Present",
+    "description": "I'm proudly working as a Software Engineer at Minim, an AI driven WiFi Management and IoT Security platform.",
+    "companyLogo": "../src/images/companies/minim.png",
+    "accomplishments": [
+      "Lead the development of the second version of the company's mobile application, which introduced an entirely new UI/UX as well as a variety of new features.",
+      "Created a custom re-usable component library for the comapny's mobile app based off the company's design guidelines.",
+      "Introduced an automated build system which would allow for automated deployments of the company's mobile app to the play store and the app store."
+    ],
+    "responsibilities": [
+      "Work in an agile development team and attent daily stand ups, sprint planning meeting and sprint retrospectives.",
+      "Design and develop new features using technologies like Vue.js and Ruby on Rails.",
+      "Coordinate and work with a diverse group of people, randing from UI/UX designers to embedded engineers."
+    ]
+  }
+]
