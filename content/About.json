@@ -13,7 +13,7 @@
       "SQL"
     ],
     "libsAndFrameworks": [
-      "Vue.js",
+      "Vue",
       "Vuex",
       "React",
       "Redux",

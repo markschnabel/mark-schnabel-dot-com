@@ -20,10 +20,10 @@
   },
   {
     "title": "Photowall",
-    "description": "A public image board that allows users to upload an image, stores the images in AWS S3 and displays them on one public board everone can contribute to. I created this project as preparation for a new job in order t learn how to use Ruby on Rails alongside Vue.js.",
+    "description": "A public image board that allows users to upload an image, stores the images in AWS S3 and displays them on one public board everone can contribute to. I created this project as preparation for a new job in order t learn how to use Ruby on Rails alongside Vue.",
     "techStack": [
       "Ruby on Rails",
-      "Vue.js",
+      "Vue",
       "JavaScript",
       "Postgres",
       "AWS S3"
