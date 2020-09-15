@@ -1,6 +1,6 @@
 [
   {
-    "title": "ColorPal",
+    "title": "Colorpal",
     "description": "A SPA/REST based web application which allows users to extract color palettes from images that they upload. It utilizes OpenCV & K-Means to extract the color palettes of uploaded images, and Flask, React and Redux for the core web application.",
     "techStack": [
       "Python",
@@ -16,7 +16,7 @@
     ],
     "projectLink": "https://color-pal.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/colorpal",
-    "image": "../src/images/projects/Colorpal.png"
+    "image": "../src/images/projects/Portfolio.png"
   },
   {
     "title": "Photowall",
@@ -30,7 +30,7 @@
     ],
     "projectLink": "https://markschnabel-photowall.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/photowall",
-    "image": "../src/images/projects/Photowall.png"
+    "image": "../src/images/projects/Portfolio.png"
   },
   {
     "title": "OpenCV Motion Detector",
