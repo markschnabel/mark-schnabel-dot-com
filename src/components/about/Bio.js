@@ -41,6 +41,10 @@ const ResumeLink = styled.a`
   @media only screen and (min-width: 992px) {
     max-width: 160px;
   }
+
+  @media only screen and (max-width: 450px) {
+    display: block;
+  }
 `;
 
 const Bio = ({ professionalBio, personalBio }) => {
