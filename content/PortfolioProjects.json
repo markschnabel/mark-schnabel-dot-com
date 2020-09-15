@@ -1,7 +1,7 @@
 [
   {
     "title": "ColorPal",
-    "description": "A SPA/REST based web application built for designers. It utilizes OpenCV & KMeans clustering to allow users to obtain the core color palettes of images they submit via direct upload or an external link. Also reaches out to the colormind.io API to provide a ML enhanced palette based on the palette of the photo they submitted.",
+    "description": "A SPA/REST based web application which allows users to extract color palettes from images that they upload. It utilizes OpenCV & K-Means to extract the color palettes of uploaded images, and Flask, React and Redux for the core web application.",
     "techStack": [
       "Python",
       "Flask",
@@ -10,14 +10,13 @@
       "Numpy",
       "JavaScript",
       "React",
+      "Redux",
       "Styled Components",
-      "Axios",
-      "Netlify",
       "Heroku"
     ],
-    "projectLink": "https://colorpal.netlify.com/",
-    "repoLink": "https://github.com/markschnabel/colorpal-client",
-    "image": "../src/images/projects/ColorPal.png"
+    "projectLink": "https://color-pal.herokuapp.com/",
+    "repoLink": "https://github.com/markschnabel/colorpal",
+    "image": "../src/images/projects/Colorpal.png"
   },
   {
     "title": "OpenCV Motion Detector",
