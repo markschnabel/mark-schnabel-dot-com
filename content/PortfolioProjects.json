@@ -16,7 +16,7 @@
     ],
     "projectLink": "https://color-pal.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/colorpal",
-    "image": "../src/images/projects/Portfolio.png"
+    "image": "../src/images/projects/Colorpal.png"
   },
   {
     "title": "Photowall",
@@ -30,7 +30,7 @@
     ],
     "projectLink": "https://markschnabel-photowall.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/photowall",
-    "image": "../src/images/projects/Portfolio.png"
+    "image": "../src/images/projects/Photowall.png"
   },
   {
     "title": "OpenCV Motion Detector",
