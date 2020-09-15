@@ -19,6 +19,20 @@
     "image": "../src/images/projects/Colorpal.png"
   },
   {
+    "title": "Photowall",
+    "description": "A public image board that allows users to upload an image, stores the images in AWS S3 and displays them on one public board everone can contribute to. I created this project as preparation for a new job in order t learn how to use Ruby on Rails alongside Vue.js.",
+    "techStack": [
+      "Ruby on Rails",
+      "Vue.js",
+      "JavaScript",
+      "Postgres",
+      "AWS S3"
+    ],
+    "projectLink": "https://markschnabel-photowall.herokuapp.com/",
+    "repoLink": "https://github.com/markschnabel/photowall",
+    "image": "../src/images/projects/Photowall.png"
+  },
+  {
     "title": "OpenCV Motion Detector",
     "description": "A Python and OpenCV program that utilizes background subtraction to work as a home-made motion detector. Can work with live-streamed video or pre-recorded video files.",
     "techStack": ["Python", "OpenCV"],
