@@ -118,11 +118,11 @@ export class ContactForm extends Component {
     const errors = {};
     const { firstName, lastName, email, phone, subject, message } = this.state;
 
-    if (!validator.isLength(subject, { min: 5, max: 100 })) {
-      errors.subject = 'Must be between 5-100 characters.';
+    if (!validator.isLength(subject, { min: 1, max: 100 })) {
+      errors.subject = 'Must be between 100 characters.';
     }
-    if (!validator.isLength(message, { min: 10, max: 1000 })) {
-      errors.message = 'Must be between 10-1000 characters.';
+    if (!validator.isLength(message, { min: 1, max: 1000 })) {
+      errors.message = 'Must be between 1000 characters.';
     }
     if (!validator.isEmail(email)) {
       errors.email = 'Must be a valid email address.';
@@ -249,7 +249,7 @@ export class ContactForm extends Component {
           <HelperText error={'subject' in errors}>
             {'subject' in errors
               ? errors.subject
-              : 'Subjects must be at least 5 characters and less than 100 characters.'}
+              : 'Subjects must be less than 100 characters.'}
           </HelperText>
 
           <StyledLabel htmlFor="message">
@@ -266,7 +266,7 @@ export class ContactForm extends Component {
           <HelperText error={'message' in errors}>
             {'message' in errors
               ? errors.message
-              : 'Messages must be at least 10 characters and less than 1000 characters.'}
+              : 'Messages must be less than 1000 characters.'}
           </HelperText>
 
           <SubmitButton type="submit">send</SubmitButton>

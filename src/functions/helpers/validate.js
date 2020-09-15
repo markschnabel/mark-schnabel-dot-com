@@ -41,11 +41,11 @@ function validate(requestBody) {
   }
 
   // Ensure all required fields meet any other specifications.
-  if (!validator.isLength(requestBody.subject, { min: 5, max: 100 })) {
-    errors.subject = 'Must be between 5-100 characters.';
+  if (!validator.isLength(requestBody.subject, { min: 1, max: 100 })) {
+    errors.subject = 'Must be between 100 characters.';
   }
-  if (!validator.isLength(requestBody.message, { min: 10, max: 1000 })) {
-    errors.message = 'Must be between 10-1000 characters.';
+  if (!validator.isLength(requestBody.message, { min: 1,max: 1000 })) {
+    errors.message = 'Must be between 1000 characters.';
   }
   if (!validator.isEmail(requestBody.email)) {
     errors.email = 'Must be a valid email address.';
