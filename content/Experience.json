@@ -1,10 +1,10 @@
 [
   {
     "company": "Minim",
-    "companySite": "https://www.minim.co/",
-    "title": "Software Engineer",
+    "companySite": "https://www.minim.com/",
+    "title": "Lead Software Engineer - Apps Team",
     "duration": "April 2019 - Present",
-    "description": "I'm proudly working as a Software Engineer at Minim, an AI driven WiFi Management and IoT Security platform.",
+    "description": "I'm proudly working as the Lead Software Engineer for the applications team at Minim, an AI driven WiFi Management and IoT Security platform.",
     "companyLogo": "../src/images/companies/minim.png",
     "accomplishments": [
       "Lead the development of the second version of the company's mobile application, which introduced an entirely new UI/UX as well as a variety of new features.",
@@ -12,10 +12,10 @@
       "Introduced an automated build system which would allow for automated deployments of the company's mobile app to the Play Store and the App Store."
     ],
     "responsibilities": [
-      "Work in an agile development team and attent daily stand ups, sprint planning meeting and sprint retrospectives.",
+      "Lead daily stand ups, plan sprints, and scope out/design new features",
       "Design and develop new features using technologies like Vue and Ruby on Rails.",
       "Coordinate and work with a diverse group of people, ranging from UI/UX designers to embedded engineers.",
-      "Help to mentor and onboard new employees and interns"
+      "Help to mentor and provide guidance for new employees"
     ]
   }
 ]
