@@ -24,7 +24,7 @@
     "gatsby-transformer-json": "^2.4.11",
     "gatsby-transformer-sharp": "^2.5.4",
     "googleapis": "^52.1.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "nodemailer": "^6.4.8",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
