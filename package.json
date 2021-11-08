@@ -50,10 +50,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
     "start": "run-p start:**",
-    "start:app": "npm run develop",
+    "start:app": "gatsby develop",
     "start:lambda": "netlify-lambda serve src/functions",
     "build": "run-p build:**",
     "build:app": "gatsby build",
