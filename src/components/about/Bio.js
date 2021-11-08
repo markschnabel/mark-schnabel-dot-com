@@ -64,7 +64,7 @@ const Bio = ({ professionalBio, personalBio }) => {
         </div>
         <div>
           <ResumeLink
-            href="https://drive.google.com/file/d/1S4RJaX1YUY5YORX4tPrsEWlA0IcGtGO8/view?usp=sharing"
+            href="https://drive.google.com/file/d/1sdzT5Nt0J-qaUOnUiMSzWNEGD-ds1ij8/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
