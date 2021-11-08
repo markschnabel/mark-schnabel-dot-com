@@ -27,7 +27,7 @@ exports.handler = function(event, _, callback) {
 
   let requestBody;
 
-  // If imporoperly formatted data provided cancel
+  // If improperly formatted data provided cancel
   try {
     requestBody = JSON.parse(event.body);
   } catch {
@@ -67,7 +67,7 @@ exports.handler = function(event, _, callback) {
       send(400, {
         errors: {
           general: `Sorry! It seems something has gone wrong while processing your message.
-        Please try again shortly or feel free to contact me using one of the designated methods listed next to this form.
+        Please try again shortly or feel free to contact me using one of the methods listed next to this form.
         Thank you for your patience`
         }
       });

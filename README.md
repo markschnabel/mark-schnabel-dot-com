@@ -5,7 +5,7 @@
 Repository which contains the code for my personal website that you can find running here:<br /> [https://markschnabel.com](https://markschnabel.com).
 
 ## About this site
-* **This site was built & deployed with:** 
+* **This site was built & deployed with:**
     * JavaScript
     * React
     * GatsbyJS
@@ -14,7 +14,7 @@ Repository which contains the code for my personal website that you can find run
     * Tailwind CSS
     * EmotionJS
     * Netlify
-    * Netlify AWS Lambda Functions 
+    * Netlify AWS Lambda Functions
 
 #### JavaScript, React & Gatsby
 JavaScript, React & Gatsby were used to build out the core of the site. Gatsby was chosen in particular to turn React into static HTML/CSS/JS for increased page load times & better SEO. I also wanted to take advantage of the image optimization features that Gatsby provides through [gatsby-image](https://www.npmjs.com/package/gatsby-image). What was great about this plug-in was it allowed me to display images that it generates perfectly re-sized versions of the original for mobile, tablet and desktop to avoid making smaller devices download unecessarily large images, increasing page performance. It also adds a "blur up" effect to the images, which allows the the page to load with blurred versions of the images that slowly develop as they become available. This again added an increase page performance.
@@ -44,7 +44,7 @@ Once you have done that you can simply run the following command to transfer the
 Here "new-project-name" is where you should write what you want the name of the directory the project is stored in on your computer to be called.
 
 Next you can get the site up and running with the following commands:
-``` 
+```
     cd new-project-name
     npm install
     gatsby develop
@@ -72,13 +72,13 @@ npm
 ```
 
 ## Authors
-* **Mark Schnabel** - *Sole contributor* 
+* **Mark Schnabel**
     * GitHub - [markschnabel](https://github.com/markschnabel)
     * Linked In - [mark-j-schnabel](https://github.com/markschnabel)
     * [mark.schnabel@markschnabel.com](mailto:mark.schnabel@markschnabel.com)
 
 ## License
- 
+
 The MIT License (MIT)
 
 Copyright (c) 2019 Mark Schnabel <mark.schnabel@markschnabel.com>
