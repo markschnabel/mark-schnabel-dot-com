@@ -74,7 +74,7 @@ const ContactLinks = () => {
         </Section>
         <Section>
           <ResumeLink
-            href="https://drive.google.com/file/d/1S4RJaX1YUY5YORX4tPrsEWlA0IcGtGO8/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XGpjaYvE4DVl1MqJsiV6ObsSoBLAtMQn/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
