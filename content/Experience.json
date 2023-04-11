@@ -4,18 +4,22 @@
     "companySite": "https://www.minim.com/",
     "title": "Lead Software Engineer",
     "duration": "April 2019 - Present",
-    "description": "I'm proudly working as the Lead Software Engineer for the applications team at Minim, an AI driven WiFi Management and IoT Security platform.",
+    "description": "I'm proudly working as a Lead Software Engineer at Minim, a Motorola partner and WiFi Management and IoT Security platform.",
     "companyLogo": "../src/images/companies/minim.png",
     "accomplishments": [
-      "Lead the development of the second version of the company's mobile application, which introduced an entirely new UI/UX as well as a variety of new features.",
-      "Created a custom re-usable component library for the company's mobile app based off the company's design guidelines.",
-      "Introduced an automated build system which would allow for automated deployments of the company's mobile app to the Play Store and the App Store."
+      "Lead an entire UI/UX overhaul of Minim’s mobile application by collaborating with designers and delegating tasks to teammates.",
+      "Lead development of a white-labeling system, which allowed us to work with multiple business partners (Motorola, Irdeto, Ezecom and more) to publish distinct mobile applications.",
+      "Designed and developed the company’s mobile onboarding flow in collaboration with stakeholders and other technical leads. The onboarding flow allowed users to create an account, set up their home network and configure multiple hardware devices in one simple flow.",
+      "Implemented an automated CI/CD pipeline to create and publish builds of the company’s mobile app to both the App Store and the Google Play Store which created significant savings in engineering time.",
+      "Created a re-usable front-end component library, providing a consistent UI and reducing engineering time spent developing new features.",
+      "Set up the initial integration and unit testing frameworks to ensure consistent quality across Minim's application."
     ],
     "responsibilities": [
-      "Lead daily stand ups, plan sprints, and scope out/design new features",
-      "Design and develop new features using technologies like Vue and Ruby on Rails.",
-      "Coordinate and work with a diverse group of people, ranging from UI/UX designers to embedded engineers.",
-      "Help to mentor and provide guidance for new employees"
+      "Lead the technical design and development for the vast majority of the features in Minim’s mobile app and supporting APIs.",
+      "Lead and manage a development team consisting of interns, engineers and designers.",
+      "Participate in an agile development environment and lead daily scrum meetings.",
+      "Consistently contribute in hands-on development work for our applications and APIs.",
+      "Collaborated with product managers, executives, customer success personnel, UI/UX designers and engineers from all areas of the stack to plan and develop new features."
     ]
   }
 ]
