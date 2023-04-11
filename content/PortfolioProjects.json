@@ -34,14 +34,14 @@
   },
   {
     "title": "OpenCV Motion Detector",
-    "description": "A Python and OpenCV program that utilizes background subtraction to work as a home-made motion detector. Can work with live-streamed video or pre-recorded video files.",
+    "description": "A Python and OpenCV program that utilizes background subtraction to work as a motion detector. Can work with live-streamed video or pre-recorded video files.",
     "techStack": ["Python", "OpenCV"],
     "repoLink": "https://github.com/markschnabel/opencv-motion-detector",
     "image": "../src/images/projects/MotionDetector.jpg"
   },
   {
     "title": "Portfolio",
-    "description": "The webiste you're on right now! I built this website to showcase my current and upcoming projects. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and auto generate components from markdown, and Netlify serverless lambda functions to serve emails from my contact form.",
+    "description": "The webiste you're on right now! I built this website to showcase my current and upcoming projects. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and automatically generate components from JSON, and Netlify serverless lambda functions to serve emails from my contact form.",
     "techStack": [
       "JavaScript",
       "React",
