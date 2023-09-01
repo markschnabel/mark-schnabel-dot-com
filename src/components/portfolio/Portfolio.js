@@ -17,7 +17,6 @@ const Portfolio = () => {
                 title
                 description
                 techStack
-                projectLink
                 repoLink
                 image {
                   childImageSharp {
@@ -43,7 +42,7 @@ const Portfolio = () => {
             description,
             image,
             techStack,
-            projectLink,
+            projectLink = null,
             repoLink
           } = data.node;
 

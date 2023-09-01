@@ -1,7 +1,7 @@
 [
   {
     "title": "Colorpal",
-    "description": "A SPA/REST based web application which allows users to extract color palettes from images that they upload. It utilizes OpenCV & K-Means to extract the color palettes of uploaded images, and Flask, React and Redux for the core web application.",
+    "description": "A web app that I first created on the side while in college to learn new skills. It allows users to upload an image and extract its color palette. It makes use of a React client and a Python (Flask) REST API. The React client POSTs images to the Python REST API which then uses OpenCV, image processing techniques and K-Means Clustering to extract its palette and return it to the client.",
     "techStack": [
       "Python",
       "Flask",
@@ -14,21 +14,21 @@
       "Styled Components",
       "Heroku"
     ],
-    "projectLink": "https://color-pal.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/colorpal",
     "image": "../src/images/projects/ColorPal.png"
   },
   {
     "title": "Photowall",
-    "description": "A public image board that allows users to upload an image, stores the images in AWS S3 and displays them on one public board everone can contribute to. I created this project as preparation for a new job in order t learn how to use Ruby on Rails alongside Vue.",
+    "description": "A web app that I created as a test for my first software internship. It's supposed to be a public image board that allows users to upload an image, stores the images in AWS S3 and displays them on one public board everone can contribute to. This project helped me learn the basics of Ruby on Rails and Vue.",
     "techStack": [
       "Ruby on Rails",
       "Vue",
       "JavaScript",
       "Postgres",
-      "AWS S3"
+      "AWS S3",
+      "SemanticUI",
+      "RSpec"
     ],
-    "projectLink": "https://markschnabel-photowall.herokuapp.com/",
     "repoLink": "https://github.com/markschnabel/photowall",
     "image": "../src/images/projects/Photowall.png"
   },
@@ -41,14 +41,13 @@
   },
   {
     "title": "Portfolio",
-    "description": "The webiste you're on right now! I built this website to showcase my current and upcoming projects. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and automatically generate components from JSON, and Netlify serverless lambda functions to serve emails from my contact form.",
+    "description": "The webiste you're on right now! I built this website to help showcase my projects and experience as an engineer. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and automatically generate components from JSON, and Netlify serverless lambda functions to serve emails from my contact form.",
     "techStack": [
       "JavaScript",
       "React",
       "Gatsby",
       "GraphQL",
-      "Markdown",
-      "Tailwind",
+      "TailwindCSS",
       "CSS",
       "Emotion JS",
       "Netlify",
