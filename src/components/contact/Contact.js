@@ -8,6 +8,10 @@ import styled from '@emotion/styled';
 
 const Header = styled.h2`
   ${tw`text-6xl m-2`};
+
+  @media only screen and (max-width: 992px) {
+    ${tw`text-3xl text-center m-0`};
+  }
 `;
 
 const Contact = () => {
