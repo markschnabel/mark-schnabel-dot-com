@@ -7,19 +7,18 @@
     "description": "I'm proudly working as a Lead Software Engineer at Minim, a Motorola partner and WiFi Management and IoT Security platform.",
     "companyLogo": "../src/images/companies/minim.png",
     "accomplishments": [
-      "Lead an entire UI/UX overhaul of Minim’s mobile application by collaborating with designers and delegating tasks to teammates.",
-      "Lead development of a white-labeling system, which allowed us to work with multiple business partners (Motorola, Irdeto, Ezecom and more) to publish distinct mobile applications.",
-      "Designed and developed the company’s mobile onboarding flow in collaboration with stakeholders and other technical leads. The onboarding flow allowed users to create an account, set up their home network and configure multiple hardware devices in one simple flow.",
-      "Implemented an automated CI/CD pipeline to create and publish builds of the company’s mobile app to both the App Store and the Google Play Store which created significant savings in engineering time.",
-      "Created a re-usable front-end component library, providing a consistent UI and reducing engineering time spent developing new features.",
-      "Set up the initial integration and unit testing frameworks to ensure consistent quality across Minim's application."
+      "Developed a cross platform app that could manage the configuration for over 20+ different WiFi devices (routers) and powered thousands of users home networks",
+      "Led the technical implementation of an entire UI/UX redesign of the mobile application by collaborating with designers and delegating tasks to team members",
+      "Lead development of a white-labeling system for our mobile application, which allowed us to publish distinct mobile applications with multiple business partners, including Motorola",
+      "Designed and developed the technical implementation for the app’s mobile onboarding flow in collaboration with stakeholders and other technical leads. The onboarding flow allowed users to create an account an set up their home network",
+      "Implemented an automated CI/CD pipeline to create and publish builds of our mobile application to both the App Store and Google Play store which created significant savings in engineering time",
+      "Created a reusable front-end component library that adhered to our internal design system which helped to reduce time required to develop new features",
+      "Designed full stack solutions to problems such as authentication and in-app payment processing"
     ],
     "responsibilities": [
-      "Lead the technical design and development for the vast majority of the features in Minim’s mobile app and supporting APIs.",
-      "Lead and manage a development team consisting of interns, engineers and designers.",
-      "Participate in an agile development environment and lead daily scrum meetings.",
-      "Consistently contribute in hands-on development work for our applications and APIs.",
-      "Collaborated with product managers, executives, customer success personnel, UI/UX designers and engineers from all areas of the stack to plan and develop new features."
+      "Led the technical design and development for the majority of the features in the company’s mobile app and supporting APIs",
+      "Led and managed a small development team known as the Apps team consisting of engineers, interns and a designer",
+      "Collaborated with team members from all across the company such as product managers, executives, customer support personnel, sales reps, designers and engineers from all areas of the stack to design and develop new features in an agile environment"
     ]
   }
 ]
