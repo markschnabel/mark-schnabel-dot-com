@@ -41,7 +41,7 @@
   },
   {
     "title": "Portfolio",
-    "description": "The webiste you're on right now! I built this website to help showcase my projects and experience as an engineer. I used Gatsby JS to turn React into Static HTML/CSS/JS for increased load times, GraphQL to query and automatically generate components from JSON, and Netlify serverless lambda functions to serve emails from my contact form.",
+    "description": "The webiste you're on right now! I built this website to help showcase my projects and experience as an engineer. I built the site using Gatsby which let me write code in React which it turns into Static HTML/CSS/JS at compile time for increased load times and a lower bundle size. Components are automatically generated for the site using JSON and Gatsby's GraphQL query layer to allow for easy updates to content. The site is deployed to and hosted on Netlify.",
     "techStack": [
       "JavaScript",
       "React",
@@ -50,9 +50,7 @@
       "TailwindCSS",
       "CSS",
       "Emotion JS",
-      "Netlify",
-      "Nodemailer",
-      "Netlify AWS Lambda Functions"
+      "Netlify"
     ],
     "repoLink": "https://github.com/markschnabel/mark-schnabel-dot-com",
     "image": "../src/images/projects/Portfolio.png"
