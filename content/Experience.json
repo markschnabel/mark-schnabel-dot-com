@@ -9,16 +9,17 @@
     "accomplishments": [
       "Developed a cross platform app that could manage the configuration for over 20+ different WiFi devices (routers) and powered thousands of users home networks",
       "Led the technical implementation of an entire UI/UX redesign of the mobile application by collaborating with designers and delegating tasks to team members",
-      "Lead development of a white-labeling system for our mobile application, which allowed us to publish distinct mobile applications with multiple business partners, including Motorola",
-      "Designed and developed the technical implementation for the app’s mobile onboarding flow in collaboration with stakeholders and other technical leads. The onboarding flow allowed users to create an account an set up their home network",
-      "Implemented an automated CI/CD pipeline to create and publish builds of our mobile application to both the App Store and Google Play store which created significant savings in engineering time",
+      "Lead development of a white-labeling system for the mobile application, which allowed us to publish distinct mobile applications with multiple business partners, including Motorola",
+      "Designed and developed the technical implementation for the app’s mobile onboarding flow in collaboration with designers and other technical leads. The onboarding flow allowed users to create an account, configure multiple hardware devices and set up their home network",
       "Created a reusable front-end component library that adhered to our internal design system which helped to reduce time required to develop new features",
-      "Designed full stack solutions to problems such as authentication and in-app payment processing"
+      "Implemented an automated CI/CD pipeline to create and publish builds of our multiple white-labeled mobile applications to both the App Store and Google Play store which created significant savings in engineering time",
+      "Designed full stack solutions to problems such as authentication and in-app payment processing",
+      "Set up automated integration and unit testing frameworks for our UI projects to help reduce regressions and ensure code quality"
     ],
     "responsibilities": [
       "Led the technical design and development for the majority of the features in the company’s mobile app and supporting APIs",
       "Led and managed a small development team known as the Apps team consisting of engineers, interns and a designer",
-      "Collaborated with team members from all across the company such as product managers, executives, customer support personnel, sales reps, designers and engineers from all areas of the stack to design and develop new features in an agile environment"
+      "Collaborated with team members from all across the company such as product managers, executives, customer support personnel, designers and engineers from all areas of the stack to design and develop new features in an agile environment"
     ]
   }
 ]
