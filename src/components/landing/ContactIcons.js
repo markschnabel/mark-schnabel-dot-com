@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import styled from '@emotion/styled';
 
 const IconLinksWrapper = styled.div`

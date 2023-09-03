@@ -9,12 +9,13 @@ module.exports = {
     tw: true
   },
 
+  plugins: ['@emotion'],
+
   rules: {
     indent: ['error', 2],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     eqeqeq: ['error', 'always'],
-    'max-len': ['error', { code: 120 }],
     'linebreak-style': ['error', 'unix'],
     'object-curly-spacing': ['error', 'always'],
     'no-undefined': ['error'],
@@ -27,7 +28,7 @@ module.exports = {
     'array-element-newline': ['error', 'consistent'],
     'array-bracket-newline': ['error', { multiline: true }],
     'no-trailing-spaces': ['error'],
-    'no-unneeded-ternary': ['error', { 'defaultAssignment': false }],
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
     'prefer-const': ['error'],
     'space-before-function-paren': [
       'error',

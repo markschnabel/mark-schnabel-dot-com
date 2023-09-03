@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import Fade from 'react-reveal/Fade';
 
 const StyledFooter = styled.footer`
-  ${tw`mb-32 mt-12 lg:my-24 text-center`};
+  ${tw`mb-32 mt-12 lg:my-24 text-center pb-16`};
 `;
 const ClosingText = styled.p`
   ${tw`text-xl lg:text-2xl font-semibold `};

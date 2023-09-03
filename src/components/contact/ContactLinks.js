@@ -74,7 +74,7 @@ const ContactLinks = () => {
         </Section>
         <Section>
           <ResumeLink
-            href="https://drive.google.com/file/d/1XGpjaYvE4DVl1MqJsiV6ObsSoBLAtMQn/view?usp=sharing"
+            href="https://drive.google.com/file/d/1qoDypvSZgjD-gUG0RwymL60nwW_iIyeG/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -83,7 +83,7 @@ const ContactLinks = () => {
         </Section>
         <Section>
           <ResumeLink
-            href="https://docs.google.com/document/d/e/2PACX-1vR4Qrz_LRDgUsfwbkBwVmTiFrtFH3ATdRj2xVXQm68tNtvTcCVrMLfmXwo5IG0TlSlNSc-tUMQCwky9/pub"
+            href="https://docs.google.com/document/d/1TP3NgI6gz1RBJ5tmNzjpJ5YQ5pczfPp1fPRrcAuk6Dg/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
