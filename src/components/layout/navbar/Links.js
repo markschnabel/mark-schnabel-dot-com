@@ -10,7 +10,7 @@ const Link = ({ name, sectionId }) => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={70}
+        offset={-70}
       >
         {name}
       </SmoothScrollLink>
