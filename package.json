@@ -33,18 +33,21 @@
     "react-reveal": "^1.2.2",
     "react-scroll": "^1.8.9",
     "react-svg-spinner": "^1.0.4",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.3.3",
     "typeface-inter": "^3.18.1",
     "typeface-lato": "1.1.13",
     "validator": "^13.9.0"
   },
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.10.0",
+    "autoprefixer": "^10.4.15",
     "dotenv": "^16.0.3",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-react-app": "^7.0.1",
+    "gatsby-plugin-postcss": "^6.12.0",
     "http-proxy-middleware": "^2.0.6",
-    "netlify-lambda": "^2.0.16"
+    "netlify-lambda": "^2.0.16",
+    "postcss": "^8.4.29"
   },
   "scripts": {
     "format": "prettier --write '**/*.js'",
