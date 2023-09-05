@@ -1,22 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 
 import Container from '../../shared/Container';
 import Brand from './Brand';
 import MobileMenuButton from './MobileMenuButton';
 import Links from './Links';
-import { colors as twColors } from '../../../../tailwind';
-
-const StyledNav = styled.nav`
-  ${tw`z-50 fixed pin-t w-100% py-5`};
-  background: ${props =>
-    props.navShouldBeTransparent ? 'transparent' : twColors.background};
-  transition: background 0.5s ease;
-`;
-const FlexContainer = styled.div`
-  ${tw`flex justify-between`};
-`;
 
 const Navbar = ({
   navShouldBeTransparent,
@@ -24,19 +12,24 @@ const Navbar = ({
   mobileMenuIsOpen,
   closeMobileMenu
 }) => {
+  const navBgClass = navShouldBeTransparent ? 'bg-transparent' : 'bg-background';
+
   return (
-    <StyledNav navShouldBeTransparent={navShouldBeTransparent}>
+    <nav
+      className={`z-50 fixed pin-t w-full py-5 ${navBgClass}`}
+      style={{ transition: 'background 0.5s ease;' }}
+    >
       <Container>
-        <FlexContainer>
+        <div className="flex justify-between">
           <Brand closeMobileMenu={closeMobileMenu} />
           <MobileMenuButton
             toggleMobileMenu={toggleMobileMenu}
             mobileMenuIsOpen={mobileMenuIsOpen}
           />
           <Links />
-        </FlexContainer>
+        </div>
       </Container>
-    </StyledNav>
+    </nav>
   );
 };
 
