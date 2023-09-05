@@ -4,15 +4,6 @@ import Fade from 'react-reveal/Fade';
 
 import SectionHeader from '../shared/SectionHeader';
 import ContactLinks from './ContactLinks';
-import styled from '@emotion/styled';
-
-const Header = styled.h2`
-  ${tw`text-6xl m-2`};
-
-  @media only screen and (max-width: 992px) {
-    ${tw`text-3xl text-center m-0`};
-  }
-`;
 
 const Contact = () => {
   return (
@@ -22,10 +13,10 @@ const Contact = () => {
         <Row>
           <Col lg={6}>
             <Fade left delay={50} distance="50px">
-              <Header>Let's build</Header>
+              <h3 className="text-3xl sm:text-center lg:text-6xl lg:m-2">Let's build</h3>
             </Fade>
             <Fade right delay={50} distance="50px">
-              <Header>something</Header>
+              <h3 className="text-3xl sm:text-center lg:text-6xl lg:m-2">something</h3>
             </Fade>
           </Col>
           <Col lg={6}>
