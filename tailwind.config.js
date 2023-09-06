@@ -25,6 +25,10 @@ module.exports = {
         grey: '#a2a7af',
         'grey-light': '#ddd',
         white: '#F2F1ED'
+      },
+
+      margin: {
+        '5%': '5%'
       }
     }
   },

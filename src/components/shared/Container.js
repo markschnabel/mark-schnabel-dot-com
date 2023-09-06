@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-
-const ContainerStyles = styled.div`
-  ${tw`mx-5% xl:mx-auto max-w-1200`};
-`;
 
 const Container = ({ children }) => {
-  return <ContainerStyles>{children}</ContainerStyles>;
+  return <div className="mx-5% xl:mx-auto max-w-screen-xl">{children}</div>;
 };
 
 Container.propTypes = {

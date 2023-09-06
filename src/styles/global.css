@@ -29,3 +29,7 @@
   background: theme(colors.white);
   color: theme(colors.black);
 }
+
+.bold-reveal .react-reveal span {
+  font-weight: theme(fontWeight.semibold);
+}
