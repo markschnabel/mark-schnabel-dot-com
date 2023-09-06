@@ -11,7 +11,7 @@ const AnimatedCircle = ({ duration, direction = null }) => {
 
 const BackgroundAnimation = () => {
   return (
-    <div className="relative w-100% h-screen flex justify-center items-center bg-transparent">
+    <div className="relative w-full h-screen flex justify-center items-center bg-transparent">
       <AnimatedCircle duration="24s" direction="reverse" />
       <AnimatedCircle duration="24s" />
       <AnimatedCircle duration="32s" direction="reverse" />
