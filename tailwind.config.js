@@ -6,6 +6,24 @@ module.exports = {
   ],
 
   theme: {
+    fontFamily: {
+      secondary: [
+        'inter-ui',
+        'system-ui',
+        'BlinkMacSystemFont',
+        '-apple-system',
+        'Segoe UI',
+        'Roboto',
+        'Oxygen',
+        'Ubuntu',
+        'Cantarell',
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        'sans-serif'
+      ]
+    },
+
     extend: {
       colors: {
         transparent: 'transparent',
@@ -28,11 +46,13 @@ module.exports = {
       },
 
       margin: {
-        '5%': '5%'
+        '5%': '5%',
+        '45%': '45%'
       },
 
       width: {
-        350: '350px'
+        350: '350px',
+        '2px': '2px'
       },
 
       height: {
@@ -42,6 +62,12 @@ module.exports = {
       maxWidth: {
         180: '180px',
         '4xs': '2.2rem'
+      },
+
+      spacing: {
+        '10px': '10px',
+        '5%': '5%',
+        '10%': '10%'
       }
     }
   },

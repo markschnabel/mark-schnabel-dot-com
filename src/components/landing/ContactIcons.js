@@ -1,39 +1,25 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { css } from '@emotion/css';
-import styled from '@emotion/styled';
-
-const IconLinksWrapper = styled.div`
-  ${tw`absolute flex justify-end w-100%`};
-  bottom: 15px;
-`;
-
-const IconLinkStyle = css`
-  ${tw`text-lg ml-6 text-grey-light cursor-pointer`};
-  transition: all 0.25s ease;
-  &:hover {
-    fill: #b8572c;
-  }
-`;
 
 const ContactIcons = () => {
   return (
-    <IconLinksWrapper>
+    <div className="absolute flex justify-end w-full" style={{ bottom: '15px' }}>
       <a
         href="https://github.com/markschnabel"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaGithub className={IconLinkStyle} />
+        <FaGithub className="text-grey-light hoverable-icon" />
       </a>
       <a
+        className="text-lg ml-6 text-grey-light cursor-pointer transition-all duration-200 ease-in-out "
         href="http://linkedin.com/in/mark-j-schnabel"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin className={IconLinkStyle} />
+        <FaLinkedin className="text-grey-light hoverable-icon" />
       </a>
-    </IconLinksWrapper>
+    </div>
   );
 };
 
