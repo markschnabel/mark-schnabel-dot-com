@@ -1,27 +1,16 @@
 import React from 'react';
-import styled from '@emotion/styled';
 import Fade from 'react-reveal/Fade';
-
-const StyledFooter = styled.footer`
-  ${tw`mb-32 mt-12 lg:my-24 text-center pb-16`};
-`;
-const ClosingText = styled.p`
-  ${tw`text-xl lg:text-2xl font-semibold `};
-`;
-const Copyright = styled.p`
-  ${tw`text-base font-light mt-2 text-grey-light`};
-`;
 
 const Footer = () => {
   return (
-    <StyledFooter>
+    <footer className="mb-32 mt-12 lg:my-24 text-center pb-16">
       <Fade left delay={50} distance="50px">
-        <ClosingText>Thank you for visiting!</ClosingText>
+        <p className="text-xl lg:text-2xl font-semibold ">Thank you for visiting!</p>
       </Fade>
       <Fade right delay={50} distance="50px">
-        <Copyright>Copyright {new Date().getFullYear()} © Mark Schnabel</Copyright>
+        <p className="text-base font-light mt-2 text-grey-light">Copyright {new Date().getFullYear()} © Mark Schnabel</p>
       </Fade>
-    </StyledFooter>
+    </footer>
   );
 };
 
