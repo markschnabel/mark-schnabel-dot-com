@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 
@@ -9,16 +8,6 @@ import ProfilePicture from './ProfilePicture';
 import Bio from './Bio';
 import SkillsHeader from './SkillsHeader';
 import Skill from './Skill';
-
-const SkillsSectionHeader = styled.h2`
-  ${tw`text-xl m-0 text-center tracking-wide font-semibold uppercase mt-20`};
-`;
-
-const Underline = styled.div`
-  ${tw`bg-white w-100% mb-2 m-auto mt-1`};
-  max-width: 180px;
-  height: 1px;
-`;
 
 function formatSkills(skills) {
   return skills.map(skillName => {
@@ -66,12 +55,12 @@ const About = () => {
                 <Row>
                   <Col xs={12}>
                     <Fade left delay={50} distance="25px">
-                      <SkillsSectionHeader>
+                      <h3 className="text-xl m-0 text-center tracking-wide font-semibold uppercase mt-20">
                         Technical Skills
-                      </SkillsSectionHeader>
+                      </h3>
                     </Fade>
                     <Fade right delay={50} distance="25px">
-                      <Underline />
+                      <hr className="bg-white w-100% mb-2 m-auto mt-1 max-w-180" />
                     </Fade>
                   </Col>
                 </Row>
