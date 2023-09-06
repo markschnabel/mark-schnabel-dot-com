@@ -1,35 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-
-const RoleTitle = styled.h3`
-  ${tw`text-xl lg:text-2xl m-0 font-semibold`};
-
-  a {
-    ${tw`no-underline text-accent`};
-    transition: all 0.25s ease;
-  }
-`;
-
-const DurationText = styled.p`
-  ${tw`text-base my-2 font-light tracking-wide`};
-`;
-
-const DescriptionText = styled.p`
-  ${tw`text-base my-2 font-light tracking-wide`};
-`;
-
-const SubHeaderText = styled.h3`
-  ${tw`text-base mt-4 mb-2 font-medium`};
-`;
-
-const List = styled.ul`
-  padding-left: 20px;
-
-  li {
-    ${tw`text-base my-2 font-light`};
-  }
-`;
 
 const RoleText = ({
   company,
@@ -42,21 +12,33 @@ const RoleText = ({
 }) => {
   return (
     <div>
-      <RoleTitle>
-        {title}
-        {' '}
-        <a href={companySite} target="_blank" rel="noopener noreferrer">@{company}</a>
-      </RoleTitle>
-      <DurationText>{duration}</DurationText>
-      <DescriptionText>{description}</DescriptionText>
-      <SubHeaderText>Major Accomplishments:</SubHeaderText>
-      <List>
-        {accomplishments.map((a, i) => <li key={`accomplishments-${i}`}>{a}</li>)}
-      </List>
-      <SubHeaderText>Day to Day Responsiblities:</SubHeaderText>
-      <List>
-        {responsibilities.map((a, i) => <li key={`responsibilities-${i}`}>{a}</li>)}
-      </List>
+      <h3 className="text-xl lg:text-2xl m-0 font-semibold">
+        <span>{title}</span>
+        &nbsp;
+        <a
+          className="no-underline text-accent"
+          href={companySite}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @{company}
+        </a>
+      </h3>
+
+      <p className="text-base my-2 font-light tracking-wide">{duration}</p>
+      <p className="text-base my-2 font-light tracking-wide">{description}</p>
+
+      <p className="text-base mt-4 mb-2 font-medium">Major Accomplishments:</p>
+      <ul className="pl-5 text-base my-2 font-light">
+        {accomplishments.map((a, i) => (
+          <li key={`accomplishments-${i}`}>{a}</li>
+        ))}
+      </ul>
+
+      <p className="text-base mt-4 mb-2 font-medium">Day to Day Responsiblities:</p>
+      <ul className="pl-5 text-base my-2 font-light">
+        {responsibilities.map((r, i) => <li key={`responsibilities-${i}`}>{r}</li>)}
+      </ul>
     </div>
   );
 };
