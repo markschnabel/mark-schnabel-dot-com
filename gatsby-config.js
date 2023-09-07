@@ -21,8 +21,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-tailwindcss',
-    'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',

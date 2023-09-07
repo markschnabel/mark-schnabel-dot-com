@@ -5,10 +5,6 @@ module.exports = {
 
   extends: 'react-app',
 
-  globals: {
-    tw: true
-  },
-
   plugins: ['@emotion'],
 
   rules: {
