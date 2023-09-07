@@ -1,49 +1,49 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 import { Link as SmoothScrollLink } from 'react-scroll';
 
-const StyledList = styled.ul`
-  ${tw`list-reset text-center pt-48 m-auto`};
-`;
-
-const StyledLink = styled(SmoothScrollLink)`
-  ${tw`text-3xl my-32 cursor-pointer font-semibold tracking-extra-wide hover:text-accent`};
-  transition: color 0.5s ease;
-`;
+const ListItem = ({ name, id, closeMobileMenu }) => {
+  return (
+    <li>
+      <SmoothScrollLink
+        to={id}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-70}
+        onClick={closeMobileMenu}
+        className="text-3xl my-32 cursor-pointer font-semibold tracking-extra-wide hover:text-accent transition-colors duration-500 ease-in-out"
+      >
+        {name}
+      </SmoothScrollLink>
+    </li>
+  );
+};
 
 const PageLinks = ({ closeMobileMenu }) => {
-  const SCROLL_CONFIG = {
-    spy: true,
-    smooth: true,
-    duration: 500,
-    offset: -70,
-    onClick: closeMobileMenu
-  };
-
   return (
-    <StyledList>
-      <li>
-        <StyledLink to="experienceSection" {...SCROLL_CONFIG}>
-          EXPERIENCE
-        </StyledLink>
-      </li>
-      <li>
-        <StyledLink to="portfolioSection" {...SCROLL_CONFIG}>
-          PORTFOLIO
-        </StyledLink>
-      </li>
-      <li>
-        <StyledLink to="aboutSection" {...SCROLL_CONFIG}>
-          ABOUT
-        </StyledLink>
-      </li>
-      <li>
-        <StyledLink to="contactSection" {...SCROLL_CONFIG}>
-          CONTACT
-        </StyledLink>
-      </li>
-    </StyledList>
+    <ul className="list-reset text-center pt-48 m-auto">
+      <ListItem
+        name="EXPERIENCE"
+        id="experienceSection"
+        closeMobileMenu={closeMobileMenu}
+      />
+      <ListItem
+        name="PORTFOLIO"
+        id="portfolioSection"
+        closeMobileMenu={closeMobileMenu}
+      />
+      <ListItem
+        name="ABOUT"
+        id="aboutSection"
+        closeMobileMenu={closeMobileMenu}
+      />
+      <ListItem
+        name="CONTACT"
+        id="contactSection"
+        closeMobileMenu={closeMobileMenu}
+      />
+    </ul>
   );
 };
 

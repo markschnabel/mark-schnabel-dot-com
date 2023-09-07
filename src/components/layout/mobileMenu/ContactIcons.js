@@ -1,41 +1,26 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import styled from '@emotion/styled';
-
-import { colors as twColors } from '../../../../tailwind';
-
-const ContactIconsWrapper = styled.div`
-  ${tw`inline-block w-100% text-center mt-16`};
-`;
-
-const StyledIconLink = styled.a`
-  ${tw`text-xl cursor-pointer mx-4`};
-  &:hover {
-    svg {
-      fill: ${twColors.accent};
-    }
-  }
-  transition: all 0.5s ease;
-`;
 
 const ContactIcons = () => {
   return (
-    <ContactIconsWrapper>
-      <StyledIconLink
+    <div className="inline-block w-100% text-center mt-16">
+      <a
+        className="text-xl cursor-pointer mx-4 transition-all duration-500 ease-in-out"
         href="https://github.com/markschnabel"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaGithub />
-      </StyledIconLink>
-      <StyledIconLink
+        <FaGithub className="hoverable-icon" />
+      </a>
+      <a
+        className="text-xl cursor-pointer mx-4 transition-all duration-500 ease-in-out"
         href="https://www.linkedin.com/in/mark-j-schnabel/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin />
-      </StyledIconLink>
-    </ContactIconsWrapper>
+        <FaLinkedin className="hoverable-icon" />
+      </a>
+    </div>
   );
 };
 
