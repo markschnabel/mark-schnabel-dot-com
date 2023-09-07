@@ -61,7 +61,8 @@ module.exports = {
 
       maxWidth: {
         180: '180px',
-        '4xs': '2.2rem'
+        '4xs': '2.2rem',
+        '600px': '600px'
       },
 
       spacing: {

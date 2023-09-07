@@ -2,37 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Col } from 'react-flexbox-grid';
 import Img from 'gatsby-image';
-import styled from '@emotion/styled';
 import Fade from 'react-reveal/Fade';
-
-const ImageContainer = styled.div`
-  position: relative;
-  max-width: 600px;
-  max-height: 400px;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  transition: all 0.6s ease;
-`;
-const StyledImg = styled(Img)`
-  border-radius: 10px;
-`;
-const HoverOverlay = styled.div`
-  ${tw`absolute pin opacity-0 w-100% h-100% flex flex-col items-center justify-center`};
-  max-width: 600px;
-  max-height: 400px;
-  transition: all 0.6s ease;
-
-  &:hover {
-    box-shadow: inset 0 0 150px #000000;
-    background: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    opacity: 1;
-  }
-`;
-const HoverText = styled.p`
-  ${tw`text-white text-3xl font-semibold `};
-`;
 
 const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
   const hasProjectLink = projectLink && projectLink.length;
@@ -48,14 +18,14 @@ const ProjectImage = ({ image, reverse, projectLink, repoLink }) => {
         left={!reverse}
         right={!!reverse}
       >
-        <ImageContainer>
+        <div className="project-image">
           <a href={link} target="_blank" rel="noopener noreferrer">
-            <StyledImg fluid={image.childImageSharp.fluid} />
-            <HoverOverlay>
-              <HoverText>{hoverText}</HoverText>
-            </HoverOverlay>
+            <Img fluid={image.childImageSharp.fluid} style={{ borderRadius: '10px' }} />
+            <div className="absolute pin opacity-0 w-100% h-100% flex flex-col items-center justify-center hover-overlay">
+              <p className="text-white text-3xl font-semibold">{hoverText}</p>
+            </div>
           </a>
-        </ImageContainer>
+        </div>
       </Fade>
     </Col>
   );
